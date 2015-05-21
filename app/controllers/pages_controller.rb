@@ -13,4 +13,14 @@ class PagesController < ApplicationController
 
   def about
   end
+
+  def directory
+  end
+
+  def services
+
+  end
+
+  def beyond_lagos
+  end
 end

@@ -54,6 +54,25 @@
 # 	Members of State Independent Electoral Commission
 #  	Members of Health Service Commission
 # 	Lagos Sate Councile of Obas and Chiefs
+# 	Agency.create([{name: ''}, {name: ''}, {name: ''}, 
+#	  {name: ''}, {name: ''}, {name: ''}, {name: ''}, 
+# 	  {name: ''}, {name: ''}, {name: ''}, {name: ''}, 
+#     {name: ''}, {name: ''}, {name: ''}, {name: ''}, 
+#     {name: ''}, {name: ''}, {name: ''}, {name: ''}, 
+#     {name: ''}, {name: ''}, {name: ''}, {name: ''}, 
+#     {name: ''}, {name: ''}, {name: ''}, {name: ''}, 
+#     {name: ''}, {name: ''}, {name: ''}, {name: ''}])
+# 	Official.create([{title: 'Governor'}, {title: 'Deputy Governor'}, {title: 'Attorney General'},
+#	  {title: 'Chief of Staff'}, {title: 'State Secretary General'}, {title: 'Head of Service'}, {title: 'Commissioner'},
+# 	  {title: 'Senator'}, {title: 'Honourable Member of National Assembly'}, {title: 'Honourable Member of House Assembly'}, {title: 'Honourable Justice'},
+# 	  {title: 'Magistrate'}, {title: 'Permanent Secretary'}, {title: 'Director General'}, {title: 'Oba'}, {title: 'Chief'},
+# 	  {title: 'Chairman of Commission'}, {title: ''}, {title: ''}, {title: ''},
+#     {title: ''}, {title: ''}, {title: ''}, {title: ''},
+#     {title: ''}, {title: ''}, {title: ''}, {title: ''}]) 
+#   LocalGovernmentArea.create([{name}, {}, ]) 
+#   Division.create([{name: 'Lagos'}, {name: 'Ikeja'}, {name: 'Epe'}, {name: 'Badagry'}, {name: 'Ikorodu'}])
+# 	AgencyType.create([{name: 'Health'}, {name: 'Police'}, {name: 'Parastatal'}, {name: 'Ministry'}, {name: 'Commission'},
+#   {name: 'Tax'}, {name: 'Driving Services'}, {name: 'Tourism'}])
 #  	Ministries, Offices, and Bureaux
 # 	Extra-Ministerial Depts/Commissions
 # 	LS Parastatals/Agencies
