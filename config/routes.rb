@@ -1,4 +1,14 @@
 Rails.application.routes.draw do
+  get 'regions/divisions'
+
+  get 'regions/local_government_areas'
+
+  get 'regions/local_council_development_areas'
+
+  get 'legistlative/national_assembly'
+
+  get 'legistlative/house_assembly'
+
   root 'pages#home'
 
   get 'pages/help'

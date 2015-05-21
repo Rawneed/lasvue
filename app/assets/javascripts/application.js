@@ -15,3 +15,8 @@
 //= require bootstrap-sprockets
 //= require turbolinks
 //= require_tree .
+$(document).ready(function(){
+  $("#p1").mouseenter(function(){
+    $("#p2").show("slow");
+  });
+});
