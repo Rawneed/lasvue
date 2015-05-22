@@ -1,6 +1,61 @@
 <% provide(:title, "Home") %>
 
-<h1 id="banner">Lasvue | A View of Lagos</h1>
-<p id="p2" class="center" style="display:none"><%= image_tag('lagos-at-night.jpg') %></p>
+<div>
+<div class="lander">
+  <div class="col-xs-3 line"><hr></div>
+  <div class="col-xs-6 logo">
+    <h1>Lasvue | A View of Lagos</h1>
+  </div>
+  <div class="col-xs-3 line"><hr></div>
+</div>
 
-<p id="p1">The Centre of Excellence.</p>
+<p id="p1">Explore The Centre of Excellence.</p>
+
+<p class="center" style="display:none"><%= image_tag('lagos-at-night.jpg', width: "100% !important") %></p>
+</div>
+
+<div class="panel">
+  <!-- Brief description -->
+  <h1>Find useful, collated, and beautifully rendered information regarding Lagos State<br>
+    <small>
+      From State-Service centres to population count, Lasvue is full of all sorts of relevant information regarding Lagos State government and state provided services. Explore Lasvue if you're a tourist, business looking to stake your claim in Lagos, or if you're a curious student.
+    </small>
+  </h1>
+</div>
+
+<div class="">
+  <!-- columns of information -->
+  <div class="row">
+    <div class="col-sm-6 col-md-4">
+      <div class="">
+        <i class="fa fa-users fa-5x"></i> 
+        <div class="caption">
+          <h3>Officials Contact</h3>
+          <p>...</p>
+          <p><a href="#" class="btn btn-primary" role="button">Explore</a></p>
+        </div>
+      </div>
+    </div>
+
+  <div class="col-sm-6 col-md-4">
+    <div class="">
+      <i class="fa fa-bank fa-5x"></i> 
+      <div class="caption">
+        <h3>Service Locations</h3>
+        <p>...</p>
+        <p><a href="#" class="btn btn-success" role="button">Learn</a></p>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6 col-md-4">
+    <div class="">
+      <i class="fa fa-ambulance fa-5x"></i> 
+      <div class="caption">
+        <h3>Thumbnail label</h3>
+        <p>...</p>
+        <p><a href="#" class="btn btn-warning" role="button">Find</a></p>
+      </div>
+    </div>
+  </div>
+  </div>
+</div>
