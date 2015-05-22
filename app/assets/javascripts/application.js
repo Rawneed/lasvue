@@ -19,4 +19,15 @@ $(document).ready(function(){
   $("#p1").mouseenter(function(){
     $("#p2").show("slow");
   });
+
+  // about
+    $("#aboutheader").mouseenter(function(){
+      $("#about").show("slow");
+  });
+});
+// about
+$(document).ready(function(){
+  $("#aboutheader").mouseenter(function(){
+    $("#about").show("slow");
+  });
 });
