@@ -23,8 +23,4 @@ class PagesController < ApplicationController
 
   def beyond_lagos
   end
-
-  def meet_lagos
-
-  end
 end

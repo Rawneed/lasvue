@@ -3,7 +3,21 @@
  	<%= link_to "Lasvue", root_path, id: "logo" %>
  	<nav>
  	  <ul class="nav navbar-nav navbar-right">
- 	    <li><%= link_to "Home" %></li>
+ 	    <li><%= link_to "Home", root_path %></li>
+ 	     <li class="dropdown"><a href=# class=" dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">Meet Lagos
+ 	    <span class="caret"></span></a>
+ 	      <ul class="dropdown-menu" role="menu" aria-lagelledby="dropdownMenuDirectory">
+ 	        <li role="presentation"><%= link_to "Profile of Lagos", profile_path, role: "menuitem", tabindex: "-1" %></li>
+ 	        <li role="presentation"><%= link_to "Location-Extent", role: "menuitem", tabindex: "-1" %></li>
+ 	        <li role="presentation"><%= link_to "Relief", role: "menuitem", tabindex: "-1" %></li>
+ 	        <li role="presentation"><%= link_to "Demography", role: "menuitem", tabindex: "-1" %></li>
+ 	        <li role="presentation"><%= link_to "Megacity", role: "menuitem", tabindex: "-1" %></li>
+ 	        <li role="presentation"><%= link_to "Meet the People", role: "menuitem", tabindex: "-1" %></li>
+ 	        <li role="presentation"><%= link_to "Divisions", role: "menuitem", tabindex: "-1" %></li>
+ 	        <li role="presentation"><%= link_to "Economy", role: "menuitem", tabindex: "-1" %></li>
+ 	        <li role="presentation"><%= link_to "Tourist Sites", role: "menuitem", tabindex: "-1" %></li>
+ 	      </ul>
+ 	    </li>
  	    <li class="dropdown"><a href=# class=" dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">Directory
  	    <span class="caret"></span></a>
  	      <ul class="dropdown-menu" role="menu" aria-lagelledby="dropdownMenuDirectory">

@@ -13,6 +13,17 @@ Rails.application.routes.draw do
   get 'directory'         => 'pages#directory'
   get 'beyond_lagos'      => 'pages#beyond_lagos'
 
+  # Meet Lagos
+  get 'profile'           => 'meet_lagos#profile_on_lagos'
+  get 'extent'            => 'meet_lagos#lagos_extent'
+  get 'relief'            => 'meet_lagos#relief'
+  get 'demography'        => 'meet_lagos#demography'
+  get 'megacity'          => 'meet_lagos#megacity'
+  get 'people'            => 'meet_lagos#people_of_lagos'
+  get 'divisions'         => 'meet_lagos#divisions'
+  get 'economy'           => 'meet_lagos#lagos_state_economy'
+  get 'tourism'           => 'meet_lagos#tourist_sites'
+
   # Directory
   get 'executive'         => 'agencies#executive_council'
   get 'legistlative'      => 'agencies#legistlative'
