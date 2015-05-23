@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  total: 1
+  male: 1
+  female: 1
+  local_area_id: 
+
+two:
+  total: 1
+  male: 1
+  female: 1
+  local_area_id: 

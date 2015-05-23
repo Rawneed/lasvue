@@ -72,7 +72,7 @@
 # 	Tertiary Institurtions
 
 # models
-#  local_government, 
+# Local_government, 
 #   symbol: symbol_name: , meaning:
 # 	population_trend: year:, population:, global_ranking:
 # 	National Assembly: person_name:, region/district:
@@ -95,18 +95,26 @@
 #     {name: ''}, {name: ''}, {name: ''}, {name: ''}, 
 #     {name: ''}, {name: ''}, {name: ''}, {name: ''}, 
 #     {name: ''}, {name: ''}, {name: ''}, {name: ''}, 
-#     {name: ''}, {name: ''}, {name: ''}, {name: ''}])
-# 	Official.create([{title: 'Governor'}, {title: 'Deputy Governor'}, {title: 'Attorney General'},
-#	  {title: 'Chief of Staff'}, {title: 'State Secretary General'}, {title: 'Head of Service'}, {title: 'Commissioner'},
-# 	  {title: 'Senator'}, {title: 'Honourable Member of National Assembly'}, {title: 'Honourable Member of House Assembly'}, {title: 'Honourable Justice'},
-# 	  {title: 'Magistrate'}, {title: 'Permanent Secretary'}, {title: 'Director General'}, {title: 'Oba'}, {title: 'Chief'},
-# 	  {title: 'Chairman of Commission'}, {title: ''}, {title: ''}, {title: ''},
+#     {name: ''}, {name: ''}, {name: ''}, {name: ''}]) 
+Division.create([{name: 'Lagos'}, {name: 'Ikeja'}, {name: 'Epe'}, {name: 'Badagry'}, {name: 'Ikorodu'}])
+#   LocalArea LG/LCDA
+LocalArea.create([{name: 'Agege'}, {name: 'Ajeromi-Ifelodun'}, {name: 'Alimosho'}, {name: 'Amuwo-Odofin'}, {name: 'Apapa'}, {name: 'Badagry'}, {name: 'Epe'}, {name: 'Eti-Osa'}, {name: 'Ibeju-Lekki'}, {name: 'Ifako-Ijaiye'},
+  {name: 'Ikeja'}, {name: 'Ikorodu'}, {name: 'Kosofe'}, {name: 'Lagos Island'}, {name: 'Lagos Mainland'}, {name: 'Mushin'}, {name: 'Ojo'}, {name: 'Oshodi Isolo'}, {name: 'Shomolu'}, {name: 'Surulere'},
+  # LCDAs
+  {name: 'Agbado Oke-Odo'}, {name: 'Agboyi-Ketu'}, {name: 'Apapa-Iganmu'}, {name: 'Ayobo-Ipaja'}, {name: 'Badagry West'}, {name: 'Bariga'}, {name: 'Coker-Aguda'}, {name: 'Egbe-Idimu'}, {name: 'Ejigbo'}, {name: 'Eredo'},
+  {name: 'Eti-Osa East'}, {name: 'Iba'}, {name: 'Ifelodun'}, {name: 'Igando-Ikotun'}, {name: 'Igbogbo-Baiyeku'}, {name: 'Ijede'}, {name: 'Ikorodu North'}, {name: 'Ikorodu West'}, {name: 'Ikosi-Ejirin'}, {name: 'Ikosi-Isheri'},
+  {name: 'Ikoyi-Obalende'}, {name: 'Imota'}, {name: 'Iru-Victoria Island'}, {name: 'Isolo'}, {name: 'Itire-Ikate'}, {name: 'Lagos Island East'}, {name: 'Lekki'}, {name: 'Mosan-Okunola'}, {name: 'Odi Olowo-Ojuwoye'}, {name: 'Ojodu'},
+  {name: 'Ojokoro'}, {name: 'Olorunda'}, {name: 'Onigbongbo'}, {name: 'Oriade'}, {name: 'Orile-Agege'}, {name: 'Oto-Awori'}, {name: 'Yaba'}])
+LocalAreaType.create([{name:'Local Government', description: ''},{name: 'Local Council Development Area', description: ''}])
+AgencyType.create([{name: 'Health'}, {name: 'Police'}, {name: 'Parastatal'}, {name: 'Ministry'}, {name: 'Commission'},
+  {name: 'Tax'}, {name: 'Driving Services'}, {name: 'Tourism'}])
+Office.create([{title: 'Governor'}, {title: 'Deputy Governor'}, {title: 'Attorney General'},
+  {title: 'Chief of Staff'}, {title: 'State Secretary General'}, {title: 'Head of Service'}, {title: 'Honourable Commissioner'},
+  {title: 'Senator'}, {title: 'Honourable Member of National Assembly'}, {title: 'Honourable Member of House Assembly'}, {title: 'Honourable Justice'},
+  {title: 'Magistrate'}, {title: 'Permanent Secretary'}, {title: 'Director General'}, {title: 'Oba'}, {title: 'Chief'},
+  {title: 'Chairman of Commission'}, {title: 'Executive Secretary'}, {title: 'General Manager'}, {title: 'Inspector General'}])
 #     {title: ''}, {title: ''}, {title: ''}, {title: ''},
 #     {title: ''}, {title: ''}, {title: ''}, {title: ''}]) 
-#   LocalGovernmentArea.create([{name}, {}, ]) 
-#   Division.create([{name: 'Lagos'}, {name: 'Ikeja'}, {name: 'Epe'}, {name: 'Badagry'}, {name: 'Ikorodu'}])
-# 	AgencyType.create([{name: 'Health'}, {name: 'Police'}, {name: 'Parastatal'}, {name: 'Ministry'}, {name: 'Commission'},
-#   {name: 'Tax'}, {name: 'Driving Services'}, {name: 'Tourism'}])
 #  	Ministries, Offices, and Bureaux
 # 	Extra-Ministerial Depts/Commissions
 # 	LS Parastatals/Agencies

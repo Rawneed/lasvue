@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150522134354) do
+ActiveRecord::Schema.define(version: 20150523025454) do
 
   create_table "agencies", force: :cascade do |t|
     t.string   "name"
@@ -27,6 +27,12 @@ ActiveRecord::Schema.define(version: 20150522134354) do
   add_index "agencies_contacts", ["agency_id"], name: "index_agencies_contacts_on_agency_id"
   add_index "agencies_contacts", ["contact_id"], name: "index_agencies_contacts_on_contact_id"
 
+  create_table "agency_types", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "contacts", force: :cascade do |t|
     t.string   "address"
     t.string   "city"
@@ -37,6 +43,29 @@ ActiveRecord::Schema.define(version: 20150522134354) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
+
+  create_table "divisions", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "local_area_types", force: :cascade do |t|
+    t.string   "name"
+    t.text     "description"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  create_table "local_areas", force: :cascade do |t|
+    t.string   "name"
+    t.integer  "division_id"
+    t.integer  "local_area_type_id"
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+  end
+
+  add_index "local_areas", ["division_id"], name: "index_local_areas_on_division_id"
 
   create_table "meet_lagos_write_ups", force: :cascade do |t|
     t.string   "title"
@@ -57,6 +86,24 @@ ActiveRecord::Schema.define(version: 20150522134354) do
     t.integer  "title_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "populations", force: :cascade do |t|
+    t.integer  "total"
+    t.integer  "male"
+    t.integer  "female"
+    t.integer  "local_area_id"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+  end
+
+  add_index "populations", ["local_area_id"], name: "index_populations_on_local_area_id"
+
+  create_table "tourist_sites", force: :cascade do |t|
+    t.string   "name"
+    t.text     "description"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
 end
