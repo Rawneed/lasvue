@@ -1,60 +1,64 @@
 <% provide(:title, "Home") %>
 
 <div>
-<div class="lander test1 test2 test3">
+<div class="lander">
+<p class="center" style="display:;height:100px;width:100%;"><%= image_tag('lagos-night.png', width: "100% !important") %></p>
   <div class="col-xs-3 line"><hr></div>
   <div class="col-xs-6 logo">
-    <h1>Lasvue | A View of Lagos</h1>
+    <h1 style="color:#fff;font-size:48pt;">
+      Lasvue | <small style="color:#fff;">A View of Lagos</small>
+    </h1>
   </div>
   <div class="col-xs-3 line"><hr></div>
 </div>
+</div>
+<p id="p1" style="color:#fff;">Explore The Centre of Excellence.</p>
+</div>
+<div style="height:160px;">
 
-<p id="p1">Explore The Centre of Excellence.</p>
-
-<p class="center" style="display:none"><%= image_tag('lagos-at-night.jpg', width: "100% !important") %></p>
 </div>
 
 <div class="panel">
   <!-- Brief description -->
   <h1>Explore Beautiful, Vibrant, Prosperous Lagos<br>
-    <small>
+    <small><p class="text-left">
       Find useful, collated, and beautifully rendered information regarding Lagos State
-      From State-Service centres to population count, Lasvue is full of all sorts of relevant information regarding Lagos State government and state provided services. Explore Lasvue if you're a tourist, business looking to stake your claim in Lagos, or if you're a curious student.
+      From State-Service centres to population count, Lasvue is full of all sorts of relevant information regarding Lagos State government and state provided services. Explore Lasvue if you're a tourist, business looking to stake your claim in Lagos, or if you're a curious student.</p>
     </small>
   </h1>
 </div>
 
-<div class="">
+<div class="container">
   <!-- columns of information -->
   <div class="row">
-    <div class="col-sm-6 col-md-4">
+    <div class="col-sm-6 col-md-4 alert alert-warning">
       <div class="">
         <i class="fa fa-users fa-5x"></i> 
         <div class="caption">
           <h3>Officials Contact</h3>
           <p>...</p>
-          <p><a href="#" class="btn btn-primary" role="button">Explore</a></p>
+          <p><a href="#" class="btn btn-warning" role="button">Explore</a></p>
         </div>
       </div>
     </div>
 
-  <div class="col-sm-6 col-md-4">
+  <div class="col-sm-6 col-md-4 alert alert-info">
     <div class="">
       <i class="fa fa-bank fa-5x"></i> 
       <div class="caption">
         <h3>Service Locations</h3>
         <p>...</p>
-        <p><a href="#" class="btn btn-success" role="button">Learn</a></p>
+        <p><a href="#" class="btn btn-info" role="button">Learn</a></p>
       </div>
     </div>
   </div>
-  <div class="col-sm-6 col-md-4">
+  <div class="col-sm-6 col-md-4 alert alert-danger">
     <div class="">
       <i class="fa fa-ambulance fa-5x"></i> 
       <div class="caption">
         <h3>Emergency Information</h3>
         <p>...</p>
-        <p><a href="#" class="btn btn-warning" role="button">Find</a></p>
+        <p><a href="#" class="btn btn-danger" role="button">Find</a></p>
       </div>
     </div>
   </div>

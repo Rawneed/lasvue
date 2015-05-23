@@ -20,6 +20,7 @@ class MeetLagosController < ApplicationController
  end
 
  def divisions
+   @divisions = Division.all
  end
 
  def lagos_state_economy

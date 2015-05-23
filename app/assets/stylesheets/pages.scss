@@ -23,18 +23,6 @@ body {
   background-image: image-url('lagos-night.png');
 }
 
-.test1 {
-  background-image: image-path('lagos-night.png');
-}
-
-.test2 {
-  background-image: asset-path('lagos-night.png');
-}
-
-.test3 {
-  background-image: asset_url('lagos-night.png');
-}
-
 h1 {
   font-size: 3em;
   letter-spacing: -2px;
@@ -51,6 +39,18 @@ thumbnail {
 }
 
 .logo {
+  h1 {
+    font-size: 30pt;
+  }
   color:#fff;
   text-align:center;
+  font-size: 25px;
+  font-weight: 1000;
+  padding-top:20px;
+}
+
+.line {
+  padding-top: 45px;
+  overflow:hidden;
+  white-space:no-wrap;
 }
