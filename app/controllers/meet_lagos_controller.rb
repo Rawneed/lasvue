@@ -20,7 +20,7 @@ class MeetLagosController < ApplicationController
  end
 
  def divisions
-   @divisions = Division.all
+   @divisions = Division.all.order(:name)
  end
 
  def lagos_state_economy

@@ -2,9 +2,9 @@ class RegionsController < ApplicationController
     
 
   def divisions
-  	@divisions = Division.all
+  	@divisions = Division.all.order(:name)
   	@division = Division.find_by(params[:name])
-  	@lgas = @division.local_areas
+  	@lgas = @division.local_areas.order(:name)
   	@colors = ['warning', 'success', 'danger', 'info'] #badge colors
   end
 

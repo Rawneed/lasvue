@@ -189,7 +189,57 @@ ikoroduDiv.settlements.create([{name: 'Ikorodu'}, {name: 'Egbin'}, {name: 'Igbog
 #  {name: 'Eti-Osa East'}, {name: 'Iba'}, {name: 'Ifelodun'}, {name: 'Igando-Ikotun'}, {name: 'Igbogbo-Baiyeku'}, {name: 'Ijede'}, {name: 'Ikorodu North'}, {name: 'Ikorodu West'}, {name: 'Ikosi-Ejirin'}, {name: 'Ikosi-Isheri'},
 #  {name: 'Ikoyi-Obalende'}, {name: 'Imota'}, {name: 'Iru-Victoria Island'}, {name: 'Isolo'}, {name: 'Itire-Ikate'}, {name: 'Lagos Island East'}, {name: 'Lekki'}, {name: 'Mosan-Okunola'}, {name: 'Odi Olowo-Ojuwoye'}, {name: 'Ojodu'},
 #  {name: 'Ojokoro'}, {name: 'Olorunda'}, {name: 'Onigbongbo'}, {name: 'Oriade'}, {name: 'Orile-Agege'}, {name: 'Oto-Awori'}, {name: 'Yaba'}])
-AgencyType.create([{name: 'Ministry'}, {name: 'Parastatal'}, {name: 'Bureau'}, {name: 'Commission'}, {name: 'Extra-Ministerial'}])
+AgencyType.create([{name: 'Ministry'}, {name: 'Parastatal'}, {name: 'Bureau'}, {name: 'Commission'}, {name: 'Extra-Ministerial'}, {name: 'Health Centre'}, {name: 'Police Command'}, {name: 'Financial Institution'},
+  {name: 'Fire Station'}, {name: 'Tourism'}, {name: 'Federal'}, {name: 'Traditional'}, {name: 'Tertiary Institutions'}])
+ministry = AgencyType.find_by('Ministry')
+parastatal = AgencyType.find_by('Parastatal')
+bureau = AgencyType.find_by('Bureau')
+commission = AgencyType.find_by('Commission')
+extra-ministry = AgencyType.find_by('Extra-Ministerial')
+health-centre = AgencyType.find_by('Health Centre')
+police = AgencyType.find_by('Police Command')
+finance = AgencyType.find_by('Financial Institution')
+fire-station = AgencyType.find_by('Fire Station')
+tourism = AgencyType.find_by('Tourism')
+federal = AgencyType.find_by('Federal')
+traditional = AgencyType.find_by('Traditional')
+tertiary = AgencyType.find_by('Tertiary Institution')
+# To create agency, supply agency name, within type, supply 
+# an array of officials within office title
+ministry.agencies.create([{name: 'Governor\'s Office'}, {name: 'Deputy Govenor\'s Office'},
+  {name: 'Ministry of Housing'}, {name: 'Office of the Secretary to the State Government'}, 
+  {name: 'Cabinet Office'}, {name: 'State Auditor General\'s Office'}, {name: 'Parastatals Monitoring Office'},
+  {name: 'Ministry of Justice'}, {name: 'Ministry of Works and Infrastructure'}, {name: 'Ministry of Information and Strategy'},
+  {name: 'Ministry of Health'}, {name: 'Ministry of Education'}, {name: 'Office of the Special Adviser on Education'}, 
+  {name: 'Ministry of Agriculture and Co-operatives'}, {name: 'Ministry of Rural Development'}, {name: 'Ministry of Home Affairs and Culture'},
+  {name: 'Lagos State Liaison Office Annex'}, {name: 'Ministry of Commerce and Industry'}, {name: 'Ministry of Local Government and Chieftancy Affairs'}, 
+  {name: 'Ministry of Waterfront Infrastructure Development'}, {name: 'Ministry of Tourism and Inter-Governmental Relations'}, 
+  {name: 'State Treasury and Accountant General\'s Office'}, {name: 'Ministry of Finance'}, {name: 'Ministry of Physical Planning and Urban Development'}, 
+  {name: 'Ministry of The Environment'}, {name: 'Ministry of Transportation'}, {name: 'Office of Mineral Resources Development'}, 
+  {name: 'Ministry of Establishments, Training and Pensions'}, {name: 'Central Business Districts Office'}, {name: 'Civil Service Pensions Office'}, 
+  {name: 'Ministry of Youth, Sports and Social Development'}, {name: 'Ministry of Women Affairs and Poverty Alleviation'}, {name: 'Ministry of Science and Technology'}, 
+  {name: 'Lagos State Valuation Office'}, {name: 'Ministry of Economic Planning and Budget'}, {name: 'Office of the Head of Service'}, {name: 'Public Service Office'}, 
+  {name: 'Ministry of Special Duties'}, {name: 'Debt Management Office'}, 
+  {name: 'Management Sercies Reforms Office'}])
+parastatal.agencies.create([{name: 'Motor Vehicle Administration Agency'}, {name: 'New Towns Development Authority'}, {name: 'Lagos Television and Eko FM'},
+  {name: ''}, {name: ''}, {name: ''}, {name: ''}, {name: ''}, {name: ''}, {name: ''}, {name: ''}, {name: ''}, {name: ''}, 
+  {name: ''}, {name: ''}, {name: ''}, {name: ''}, {name: ''}, {name: ''}, {name: ''}, {name: ''}, {name: ''}, {name: ''},
+  {name: ''}, {name: ''}, {name: ''}, {name: ''}, {name: ''}, {name: ''}, {name: ''}, {name: ''}, {name: ''}, {name: ''}, 
+  {name: ''}, {name: ''}, {name: ''}, {name: ''}, {name: ''}, {name: ''}, {name: ''}, {name: ''}, {name: ''}, {name: ''}, 
+  {name: ''}, {name: ''}, {name: ''}, {name: ''}, {name: ''}, {name: ''}, {name: ''}, {name: ''}, {name: ''}, {name: ''},
+  {name: ''}, {name: ''}, {name: ''}, {name: 'Lagos Metropolitan Development and Governance'}, {name: 'Kick Against Indiscipline'}])
+bureau.agencies.create([{name: ''}, {name: ''}])
+commission.agencies.create([{name: ''}, {name: ''}])
+extra-ministry.agencies.create([{name: ''}, {name: ''}])
+health-centre.agencies.create([{name: ''}, {name: ''}])
+police.agencies.create([{name: ''}, {name: ''}])
+finance.agencies.create([{name: ''}, {name: ''}])
+fire-station.agencies.create([{name: ''}, {name: ''}])
+tourism.agencies.create([{name: ''}, {name: ''}])
+federal.agencies.create([{name: ''}, {name: ''}])
+traditional.agencies.create([{name: ''}, {name: ''}])
+tertiary.agencies.create([{name: ''}, {name: ''}])
+
 # AgencyType.create([{name: 'Health'}, {name: 'Police'}, {name: 'Parastatal'}, {name: 'Ministry'}, {name: 'Commission'},
 #  {name: 'Tax'}, {name: 'Driving Services'}, {name: 'Tourism'}])
 Office.create([{title: 'Governor'}, {title: 'Deputy Governor'}, {title: 'Attorney General'},
@@ -225,7 +275,7 @@ epeDiv.chieftancy_titles.create([{title: 'Oloja of Epe'}, {title: 'Aladegunshebi
 # Badagry Division
 badagryDiv.chieftancy_titles.create([{title: 'Onigbanko of Igbako Land'}, {title: 'Alabiru of Ikaare'}, {title: 'Oba of Ibereko'}, 
   {title: 'Aholu Gbedite Ayaton'}, {title: 'Osolu of Irewe'}, {title: 'Aholu of Ajido'}, 
-  {title: 'Olojo of Ojo'}, {title: 'Ofork of Ibeshe'}])
+  {title: 'Olojo of Ojo'}, {title: 'Ofori of Ibeshe'}])
 # Ikorodu Division
 ikoroduDiv.chieftancy_titles.create([{title: 'Adeboruwa of Igbogbo'}, {title: 'Alajede of Ijede'}, {title: 'Ranodu of Imota'}, 
   {title: 'Olubeshe of Ibeshe'}, {title: 'Aro of Ikorodu'}, {title: 'Olisa of Imota'},
