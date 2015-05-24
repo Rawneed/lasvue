@@ -222,23 +222,34 @@ ministry.agencies.create([{name: 'Governor\'s Office'}, {name: 'Deputy Govenor\'
   {name: 'Ministry of Special Duties'}, {name: 'Debt Management Office'}, 
   {name: 'Management Sercies Reforms Office'}])
 parastatal.agencies.create([{name: 'Motor Vehicle Administration Agency'}, {name: 'New Towns Development Authority'}, {name: 'Lagos Television and Eko FM'},
-  {name: ''}, {name: ''}, {name: ''}, {name: ''}, {name: ''}, {name: ''}, {name: ''}, {name: ''}, {name: ''}, {name: ''}, 
-  {name: ''}, {name: ''}, {name: ''}, {name: ''}, {name: ''}, {name: ''}, {name: ''}, {name: ''}, {name: ''}, {name: ''},
-  {name: ''}, {name: ''}, {name: ''}, {name: ''}, {name: ''}, {name: ''}, {name: ''}, {name: ''}, {name: ''}, {name: ''}, 
-  {name: ''}, {name: ''}, {name: ''}, {name: ''}, {name: ''}, {name: ''}, {name: ''}, {name: ''}, {name: ''}, {name: ''}, 
-  {name: ''}, {name: ''}, {name: ''}, {name: ''}, {name: ''}, {name: ''}, {name: ''}, {name: ''}, {name: ''}, {name: ''},
-  {name: ''}, {name: ''}, {name: ''}, {name: 'Lagos Metropolitan Development and Governance'}, {name: 'Kick Against Indiscipline'}])
-bureau.agencies.create([{name: ''}, {name: ''}])
-commission.agencies.create([{name: ''}, {name: ''}])
-extra-ministry.agencies.create([{name: ''}, {name: ''}])
-health-centre.agencies.create([{name: ''}, {name: ''}])
-police.agencies.create([{name: ''}, {name: ''}])
+#  {name: ''}, {name: ''}, {name: ''}, {name: ''}, {name: ''}, {name: ''}, {name: ''}, {name: ''}, {name: ''}, {name: ''}, 
+#  {name: ''}, {name: ''}, {name: ''}, {name: ''}, {name: ''}, {name: ''}, {name: ''}, {name: ''}, {name: ''}, {name: ''},
+#  {name: ''}, {name: ''}, {name: ''}, {name: ''}, {name: ''}, {name: ''}, {name: ''}, {name: ''}, {name: ''}, {name: ''}, 
+#  {name: ''}, {name: ''}, {name: ''}, {name: ''}, {name: ''}, {name: ''}, {name: ''}, {name: ''}, {name: ''}, {name: ''}, 
+#  {name: ''}, {name: ''}, {name: ''}, {name: ''}, {name: ''}, {name: ''}, {name: ''}, {name: ''}, {name: ''}, {name: ''},
+#  {name: ''}, {name: ''}, {name: ''}, {name: 'Lagos Metropolitan Development and Governance'}, {name: 'Kick Against Indiscipline'}])
+# bureau.agencies.create([{name: ''}, {name: ''}])
+commission.agencies.create([{name: 'Lagos State Civil Service Commission'}, {name: 'Local Government Service Commission'}, {name: 'Judicial Service Commission'}, 
+  {name: 'Independent Electoral Commission'}, {name: 'Health Service Commission'}])
+# extra-ministry.agencies.create([{name: ''}, {name: ''}])
+health-centre.agencies.create([{name: 'Lagos Island Maternity Hospital'}, {name: 'General Hospital, Lagos'}, {name: 'General Hospital, Gbagada'}, {name: 'General Hospital, Orile Agege'}, 
+  {name: 'General Hospital, Badagry'},
+  {name: 'General Hospital, Isolo'}, {name: 'General Hospital, Ikorodu'}, {name: 'General Hospital, Surulere'}, {name: 'General Hospital, Epe'},
+  {name: 'General Hospital, Apapa'}, {name: 'General Hospital, Alimosho'}, {name: 'General Hospital, Mushin'}, {name: 'General Hospital, Somolu'},
+  {name: 'General Hospital, Ifako-Ijaiye'}, {name: 'General Hospital, Ibeju-Lekki'}, {name: 'General Hospital, Ajeromi'}, {name: 'General Hospital, Agbowa'},
+  {name: 'Mainland Hospital, Yaba'}, {name: 'Health Centre, Onikan'}, {name: 'Massey Children Hospital'}, {name: 'Health Centre, Ebute-Metta'},
+  {name: 'Health Centre, Harvey Road'}, {name: 'Health Centre, Ijede'}, {name: 'Medical Stores, Oshodi'}])
+police.agencies.create([{name: 'State Command HQ'}, {name: 'Area A Command'}, {name: 'Area B Command'}, {name: 'Area C Command'}, {name: 'Area D Command'}, 
+  {name: 'Area E Command'}, {name: 'Area F Command'}, {name: 'Area G Command'}, {name: 'Area H Command'}])
 finance.agencies.create([{name: ''}, {name: ''}])
-fire-station.agencies.create([{name: ''}, {name: ''}])
-tourism.agencies.create([{name: ''}, {name: ''}])
-federal.agencies.create([{name: ''}, {name: ''}])
-traditional.agencies.create([{name: ''}, {name: ''}])
-tertiary.agencies.create([{name: ''}, {name: ''}])
+fire-station.agencies.create([{name: 'Alausa'}, {name: 'Agege'}, {name: 'Apapa'}, {name: 'Badagry'}, {name: 'Campos'}, {name: 'Ebute-Metta'}, {name: 'Epe'}, 
+  {name: 'Festac'}, {name: 'Ikeja'}, {name: 'Ikorodu'}, 
+  {name: 'Ikoyi'}, {name: 'Ilupeju'}, {name: 'Isolo'}, {name: 'Onikan'}, {name: 'Satelite Town'}, {name: 'Surulere A'}, {name: 'Surulere B'}, {name: 'State House'}, 
+  {name: 'Trade Fair Complex'}, {name: 'Victoria Island'}])
+# tourism.agencies.create([{name: ''}, {name: ''}])
+# federal.agencies.create([{name: ''}, {name: ''}])
+# traditional.agencies.create([{name: ''}, {name: ''}])
+# tertiary.agencies.create([{name: ''}, {name: ''}])
 
 # AgencyType.create([{name: 'Health'}, {name: 'Police'}, {name: 'Parastatal'}, {name: 'Ministry'}, {name: 'Commission'},
 #  {name: 'Tax'}, {name: 'Driving Services'}, {name: 'Tourism'}])
