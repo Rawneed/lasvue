@@ -31,3 +31,12 @@ $(document).ready(function(){
     $("#about").show("slow");
   });
 });
+// Regions divisions and lgas
+$(document).ready(function(){
+    $("#divisions").hover(function(){
+        $("#lgas").slideDown("slow");
+    },
+    function() {
+      $("#lgas").slideUp("slow");
+    });
+});

@@ -1,23 +1,26 @@
 <% provide(:title, 'Regions | Divisions') %>
 <div id="header">
   <h1>Divisions of Lagos State<br>
-  <small>And their Local Areas</small>
+    <small>And their Local Areas</small>
   </h1>
-
 </div>
 
 <div class="container">
   <% @divisions.each do |division| %>
-    <h1 style="text-align:left"><%= division.name %></h1>
+    <h1 style="text-align:left" id="divisions" name="divisions"><%= division.name %></h1>
     
     <% if division.local_areas.exists? %>
+    
+    <div style="display:none" id="lgas" name="lgas">
     <h2 style="text-align:left">Local Governments Areas and Local Council Development Areas</h2><hr/>
     <% division.local_areas.each do |lga| %>
     
-    <p style="text-align:left">
+    <p style="text-align:left;">
       <%= lga.name %>
     </p>
     <% end %>
+    
     <% end %>
+    </div>
   <% end %>
 </div>
