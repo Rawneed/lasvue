@@ -83,6 +83,7 @@ Official.delete_all
 Population.delete_all
 Settlement.delete_all
 TouristSite.delete_all
+ChieftancyTitle.delete_all
 # models
 # Local_government, 
 #   symbol: symbol_name: , meaning:
@@ -198,6 +199,38 @@ Office.create([{title: 'Governor'}, {title: 'Deputy Governor'}, {title: 'Attorne
   {title: 'Chairman of Commission'}, {title: 'Executive Secretary'}, {title: 'General Manager'}, {title: 'Inspector General'}])
 #     {title: ''}, {title: ''}, {title: ''}, {title: ''},
 #     {title: ''}, {title: ''}, {title: ''}, {title: ''}]) 
+# Lagos State Council of Obas and Chiefs
+# lagosDiv = Division.find_by(name: 'Lagos')
+# ikejaDiv = Division.find_by(name: 'Ikeja')
+# epeDiv = Division.find_by(name: 'Epe')
+# badagryDiv = Division.find_by(name: 'Badagry')
+# ikoroduDiv = Division.find_by(name: 'Ikorodu')
+# Lagos General
+ChieftancyTitle.create([{title: 'Oba of Lagos'}, # Permanent Chairman
+  {title: 'Ayangburen of Ikorodu'}, {title: 'Alara of Ilara'}, {title: 'Akran of Badagry'},
+  {title: 'Olu of Ikeja'}])
+# Lagos Division
+lagosDiv.chieftancy_titles.create([{title: 'Elegushi of Ikateland'}, {title: 'Ojomu of Ajiranland'}, {title: 'Oniru of Iruland'},
+{title: 'Oniwiso of Agbabo and Tomaro'}, {title: 'Oloto of Otto and Mainland'}, 
+{title: 'Onikoyi of Ikoyi and Imoba'}, {title: 'Olorogun-Adodo of Lagos'}, {title: 'Eletu-Odibo of Lagos'},
+{title: 'Olumegbon of Lagos'}, {title: 'Aromire Onile of Lagos'}])
+# Ikeja Division
+ikejaDiv.chieftancy_titles.create([{title: 'Olu Agege of Agege'}, {title: 'Ojomu of Ejigbo'}, {title: 'Olu of Mushin'}, 
+  {title: 'Oba of Somolu'}, {title: 'Oba of Egbeda'}, {title: 'Oba of Isheri-Olofin'},
+  {title: 'Oba of Oworonshoki'}, {title: 'Oba of Odi-Olowo'}])
+# Epe Division
+epeDiv.chieftancy_titles.create([{title: 'Oloja of Epe'}, {title: 'Aladegunshebi of Odoragunshen'}, {title: 'Elejinrin of Ejinrin'}, 
+  {title: 'Alaketu of Ketu'}, {title: 'Onibeju of Ibejuland'}, {title: 'Aladeshoyin of Naforija'},
+  {title: 'Onise of Ise'}, {title: 'Orijelu of Igboye'}])
+# Badagry Division
+badagryDiv.chieftancy_titles.create([{title: 'Onigbanko of Igbako Land'}, {title: 'Alabiru of Ikaare'}, {title: 'Oba of Ibereko'}, 
+  {title: 'Aholu Gbedite Ayaton'}, {title: 'Osolu of Irewe'}, {title: 'Aholu of Ajido'}, 
+  {title: 'Olojo of Ojo'}, {title: 'Ofork of Ibeshe'}])
+# Ikorodu Division
+ikoroduDiv.chieftancy_titles.create([{title: 'Adeboruwa of Igbogbo'}, {title: 'Alajede of Ijede'}, {title: 'Ranodu of Imota'}, 
+  {title: 'Olubeshe of Ibeshe'}, {title: 'Aro of Ikorodu'}, {title: 'Olisa of Imota'},
+  {title: 'Oba of Isiu'}, {title: 'Oba of Ipakodo'}, {title: 'Oba of Egbin'}])
+# 
 #  	Ministries, Offices, and Bureaux
 # 	Extra-Ministerial Depts/Commissions
 # 	LS Parastatals/Agencies

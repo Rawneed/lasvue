@@ -23,5 +23,17 @@
     
     <% end %>
     </div>
-  <% end %>
+    
+    <div style="display:" id="lgas" name="lgas">
+    <button class="btn btn-<%= @colors.sample %>" type="button">
+      <h2 style="text-align:left;color:white;">Council of Obas and Chiefs  <span class="badge"> <%= division.chieftancy_titles.size %></span></h2></button><hr/>
+    <% division.chieftancy_titles.each do |oba| %>
+    
+    <p style="text-align:left;">
+      <%= oba.title %>
+    </p>
+    <% end %>
+    
+    </div>
+  <% end %>  
 </div>

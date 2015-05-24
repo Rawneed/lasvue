@@ -7,5 +7,6 @@ class Division < ActiveRecord::Base
   has_many :tourist_sites
   has_many :local_areas 
   has_many :settlements
+  has_many :chieftancy_titles
   #
 end
