@@ -11,8 +11,9 @@
     
     <% if division.local_areas.exists? %>
     
-    <div style="display:none" id="lgas" name="lgas">
-    <h2 style="text-align:left">Local Governments Areas and Local Council Development Areas</h2><hr/>
+    <div style="display:" id="lgas" name="lgas">
+    <button class="btn btn-<%= @colors.sample %>" type="button">
+      <h2 style="text-align:left;color:white;">Local Governments Areas and Local Council Development Areas <span class="badge"> <%= division.local_areas.size %></span></h2></button><hr/>
     <% division.local_areas.each do |lga| %>
     
     <p style="text-align:left;">

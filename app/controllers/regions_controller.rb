@@ -1,10 +1,11 @@
 class RegionsController < ApplicationController
-  
+    
 
   def divisions
   	@divisions = Division.all
   	@division = Division.find_by(params[:name])
   	@lgas = @division.local_areas
+  	@colors = ['warning', 'alert', 'danger', 'info']
   end
 
   def local_government_areas
