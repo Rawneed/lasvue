@@ -231,7 +231,10 @@ parastatal.agencies.create([{name: 'Motor Vehicle Administration Agency'}, {name
 # bureau.agencies.create([{name: ''}, {name: ''}])
 commission.agencies.create([{name: 'Lagos State Civil Service Commission'}, {name: 'Local Government Service Commission'}, {name: 'Judicial Service Commission'}, 
   {name: 'Independent Electoral Commission'}, {name: 'Health Service Commission'}])
-# extra-ministry.agencies.create([{name: ''}, {name: ''}])
+extra-ministry.agencies.create([{name: 'Local Government Accountant-General\'s Office'}, {name: 'Health Service Commission'}, {name: 'Teachers Establishment and Pensions Office'}, 
+  {name: 'State Universal Basic Education Board'},
+  {name: 'Lagos State Independent Electoral Commission'}, {name: 'Local Government Service Commission'}, {name: 'Lagos Internal Revenue Service'}, {name: 'Administrator General and Public Trustee Office'},
+  {name: 'Lagos State Consultancy Board'}, {name: 'Public-Private Partnerships Roads'}])
 health-centre.agencies.create([{name: 'Lagos Island Maternity Hospital'}, {name: 'General Hospital, Lagos'}, {name: 'General Hospital, Gbagada'}, {name: 'General Hospital, Orile Agege'}, 
   {name: 'General Hospital, Badagry'},
   {name: 'General Hospital, Isolo'}, {name: 'General Hospital, Ikorodu'}, {name: 'General Hospital, Surulere'}, {name: 'General Hospital, Epe'},
