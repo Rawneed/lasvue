@@ -5,5 +5,7 @@ class Division < ActiveRecord::Base
   # has_many :local_governents
   # has_many :local_development_areas
   has_many :tourist_sites
+  has_many :local_areas 
+  has_many :settlements
   #
 end

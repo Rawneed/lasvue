@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150523025454) do
+ActiveRecord::Schema.define(version: 20150523230221) do
 
   create_table "agencies", force: :cascade do |t|
     t.string   "name"
@@ -98,6 +98,15 @@ ActiveRecord::Schema.define(version: 20150523025454) do
   end
 
   add_index "populations", ["local_area_id"], name: "index_populations_on_local_area_id"
+
+  create_table "settlements", force: :cascade do |t|
+    t.string   "name"
+    t.integer  "division_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  add_index "settlements", ["division_id"], name: "index_settlements_on_division_id"
 
   create_table "tourist_sites", force: :cascade do |t|
     t.string   "name"

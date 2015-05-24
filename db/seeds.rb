@@ -69,8 +69,20 @@
 # 	Emergency/Vital Telephone Numbers
 # 	Docs Required For Regularization of Land
 # 	Chairmen of 20 Local Gov. & 37 Local Council Dev Areas
-# 	Tertiary Institurtions
-
+# 	Tertiary Institutions
+# Clear all the data in database before loading seed data
+Agency.delete_all
+AgencyType.delete_all
+Contact.delete_all
+Division.delete_all
+LocalArea.delete_all
+LocalAreaType.delete_all
+MeetLagosWriteUp.delete_all
+Office.delete_all
+Official.delete_all
+Population.delete_all
+Settlement.delete_all
+TouristSite.delete_all
 # models
 # Local_government, 
 #   symbol: symbol_name: , meaning:
@@ -96,34 +108,89 @@
 #     {name: ''}, {name: ''}, {name: ''}, {name: ''}, 
 #     {name: ''}, {name: ''}, {name: ''}, {name: ''}, 
 #     {name: ''}, {name: ''}, {name: ''}, {name: ''}]) 
-Division.create([{name: 'Lagos'}, {name: 'Ikeja'}, {name: 'Epe'}, {name: 'Badagry'}, {name: 'Ikorodu'}])
-LocalAreaType.create([{name:'Local Government', description: ''},{name: 'Local Council Development Area', description: ''}])
-lagosDiv = Division.find(name: 'Lagos')
-ikejaDiv = Division.find(name: 'Ikeja')
-epeDiv = Division.find(name: 'Epe')
-badagryDiv = Division.find(name: 'Badagry')
-ikoroduDiv = Division.find(name: 'Ikorodu')
+
+Division.create([{name: 'Lagos'}, {name: 'Ikeja'}, {name: 'Epe'}, 
+  {name: 'Badagry'}, {name: 'Ikorodu'}])
+LocalAreaType.create([{name:'Local Government', description: ''},
+  {name: 'Local Council Development Area', description: ''}])
+lagosDiv = Division.find_by(name: 'Lagos')
+ikejaDiv = Division.find_by(name: 'Ikeja')
+epeDiv = Division.find_by(name: 'Epe')
+badagryDiv = Division.find_by(name: 'Badagry')
+ikoroduDiv = Division.find_by(name: 'Ikorodu')
 #
 # Divisions Local Areas
-lagosDiv.local_areas.create([{name: 'Apapa'}, {name: ''}, {name: ''}, {name: ''}])
-ikejaDiv.local_areas.create([{name: 'Agege'}, {name: 'Ifako-Ijaiye'}, {name: 'Kosofe'}, {name: 'Mushin'}, {name: 'Alimosho'}, {name: 'Oshodi-Isolo'}, {name: 'Somolu'}, {name: 'Ikeja'}])
-epeDiv.local_areas.create([{name: ''}, {name: ''}, {name: ''}, {name: ''}])
-badagryDiv.local_areas.create([{name: 'Ojo'}, {name: 'Amuwo-Odofin'}, {name: 'Ajeromi-Ifelodun'}, {name: 'Badagry'}])
-ikoroduDiv.local_areas.create([{name: ''}, {name: ''}, {name: ''}, {name: ''}])
-
+lagosDiv.local_areas.create([{name: 'Lagos Island'}, {name: 'Lagos Mainland'}, 
+  {name: 'Surulere'}, {name: 'Apapa'}, {name: 'Eti-Osa'}])
+ikejaDiv.local_areas.create([{name: 'Agege'}, {name: 'Ifako-Ijaiye'}, {name: 'Kosofe'}, 
+  {name: 'Mushin'}, {name: 'Alimosho'}, {name: 'Oshodi-Isolo'}, {name: 'Somolu'}, 
+  {name: 'Ikeja'}])
+epeDiv.local_areas.create([{name: 'Epe Central'}, {name: 'Ibeju'}, {name: 'Lekki'}, 
+  {name: 'Eredo'}])
+badagryDiv.local_areas.create([{name: 'Ojo'}, {name: 'Amuwo-Odofin'}, 
+  {name: 'Ajeromi-Ifelodun'}, {name: 'Badagry'}])
+# ikoroduDiv.local_areas.create([{name: ''}, {name: ''}, {name: ''}, {name: ''}])
+# Division Settlements
+lagosDiv.settlements.create([{name: 'Takwa Bay'}, {name: 'Victoria Island'}, 
+  {name: 'Lagos Island'}, {name: 'Ikoyi'}, {name: 'Obalende'}, {name: 'Otto'},
+  {name: 'Ijora'}, {name: 'Apapa'}, {name: 'Ebute-Metta'}, {name: 'Yaba'}, {name: 'Iddo'}, 
+  {name: 'Sangotedo'}, {name: 'Mayegun'}, {name: 'Ogombo'}, {name: 'Ogoyo'},
+  {name: 'Oku-Ibeju'}, {name: 'Moba'}, {name: 'Alaguntan'}, {name: 'Ado'}, {name: 'Lambgasa'}, 
+  {name: 'Ilasan'}, {name: 'Igbo-Efon'}, {name: 'Ikota'}, {name: 'Ikate-Elegunshi'}, 
+  {name: 'Ajiran'}, {name: 'Ilasan'}, {name: 'Tomaro'}, {name: 'Agbagbo'}, 
+  {name: 'Igbo-Ejo (Snake Island)'}])
+ikejaDiv.settlements.create([{name: 'Isolo'}, {name: 'Isheri-Oshun'}, {name: 'Ikotun'}, 
+  {name: 'Isher-Olofin'}, {name: 'Meiran'}, {name: 'Ejigbo'},
+  {name: 'Egan'}, {name: 'Ketu'}, {name: 'Ojota'}, {name: 'Shangisha'}, 
+  {name: 'Oworonshoki-Mushin'}, {name: 'Abesan'}, {name: 'Magodo'}, {name: 'Egbe'}, 
+  {name: 'Igando'}, {name: 'Idimu'}, {name: 'Ayobo'}, {name: 'Iju'}, {name: 'Ifako'}, 
+  {name: 'Abule Egba'}, {name: 'Agboyi'}, {name: 'Ikosi'}, {name: 'Okota'}, {name: 'Somolu'}, 
+  {name: 'Ipaja'}, {name: 'Ayobo'}, {name: 'Abesan'}, {name: 'Oregun'}, {name: 'Isheri-Oke'}, 
+  {name: 'Oshodi'}, {name: 'Oke-Afa'}, {name: 'Ojodu'}, {name: 'Ogudu'}, {name: 'Bariga'}, 
+  {name: 'Ilupeju'}, {name: 'Obanikoro'}, {name: 'Akowonjo'}, {name: 'Agege'}, {name: 'Ijegun'}, 
+  {name: 'Itire'}, {name: 'Ikate'}, {name: 'Odi-Olowo'}, {name: 'Shasha'}, {name: 'Mende'}, 
+  {name: 'Ikeja'}, {name: 'Alimosho'}])
+epeDiv.settlements.create([{name: 'Epe'}, {name: 'Orugbo-Iddo'}, {name: 'Agbowa-Ikosi'}, 
+  {name: 'Ilara'}, {name: 'Odo-Ayandelu'}, {name: 'Odorangunse'}, {name: 'Igboye'}, 
+  {name: 'Naforija'}, {name: 'Igbodu'}, {name: 'Ejirin'}, {name: 'Pika'}, {name: 'Itoikin'}, 
+  {name: 'Idotun'}, {name: 'Ita-Oko'}, {name: 'Omi'}, {name: 'Temu'}, {name: 'Ise'}, 
+  {name: 'Debojo'}, {name: 'Apawa'}, {name: 'Aba-Titun'}, {name: 'Abomite'}, {name: 'Afere'}, 
+  {name: 'Apakin'}, {name: 'Abalaye'}, {name: 'Origanrigan'}, {name: 'Kayetoro Eleko'}, 
+  {name: 'Yeunda'}, {name: 'Okunraye'}, {name: 'Keta'}, {name: 'Arapaji'}, {name: 'Aiyeteju'}, 
+  {name: 'Okufolu'}, {name: 'Osoroko'}, {name: 'Olomowewe'}, {name: 'Ibeju'}, {name: 'Lekki'}, 
+  {name: 'Akodo'}, {name: 'Otolu'}, {name: 'Magbon-Alade'}, {name: 'Oriba'}, {name: 'Iwerekin'}, 
+  {name: 'Iberekedo'}, {name: 'Idado'}, {name: 'Okun Ifando-Orudu'}, {name: 'Tiye'}, 
+  {name: 'Awoyaya'}, {name: 'Ite-Omi'}, {name: 'Bogije'}, {name: 'Siriwon'}, {name: 'Idaso'}, 
+  {name: 'Orimedu'}, {name: 'Olorunkayo'}, {name: 'Ojota'}, {name: 'Ode-Ifa'}, {name: 'Ofin'}, 
+  {name: 'Igbesibi'}, {name: 'Igbolomi'}])
+badagryDiv.settlements.create([{name: 'Badagry'}, {name: 'Ajara'}, {name: 'Iworo-Ajido'}, 
+  {name: 'Akarakumo'}, {name: 'Gbaji'}, {name: 'Aseri'}, {name: 'Egan'}, {name: 'Aganrin'}, 
+  {name: 'Ahanfe'}, {name: 'Epe'}, {name: 'Posi'}, {name: 'Mowo'}, {name: 'Itoga'}, 
+  {name: 'Ebiri'}, {name: 'Ekunpa'}, {name: 'Aradagun'}, {name: 'Kankon'}, {name: 'Berekete'}, 
+  {name: 'Mosafejo'}, {name: 'Gayingbo-Topo'}, {name: 'Apa'}, {name: 'Moba'}, {name: 'Popoji'}, 
+  {name: 'Oranyan'}, {name: 'Tafi-Awori'}, {name: 'Yeketome'}, {name: 'Ipota'}, {name: 'Seme'}, 
+  {name: 'Iyagbe'}, {name: 'Ajegunle'}, {name: 'Aiyetoro'}, {name: 'Festac and Satelite Towns'}, 
+  {name: 'Iba'}, {name: 'Kirikiri'}, {name: 'Agboju-Amuwo'}, {name: 'Okokomaiko'}, {name: 'Ojo'}, 
+  {name: 'Amukoko'}, {name: 'Alaba-Ore'}, {name: 'Ijofin'}, {name: 'Igbanko'}, {name: 'Imore'}, 
+  {name: 'Ijegun'}, {name: 'Ibeshe'}, {name: 'Otto-Ijanikin'}, {name: 'Ilogbo Eremi'}, 
+  {name: 'Ilado'}, {name: 'Soba Ogan'}, {name: 'Onireke Odan'}])
+ikoroduDiv.settlements.create([{name: 'Ikorodu'}, {name: 'Egbin'}, {name: 'Igbogbo'}, 
+  {name: 'Imota'}, {name: 'Ijede'}, {name: 'Maya Adio'}, {name: 'Odogunyan'}, {name: 'Isiu'}, 
+  {name: 'Igbokuta'}, {name: 'Ewu-Elepe'}, {name: 'Baiyeku'}, {name: 'Oreta'}, {name: 'Ofin'}, 
+  {name: 'Gberigbe'}, {name: 'Igbalu'}])
 # localGov = LocalAreaType.find('Local Government')
 # localGov.localareas.create
 #   LocalArea LG/LCDA
-LocalArea.create([{name: 'Agege'}, {name: 'Ajeromi-Ifelodun'}, {name: 'Alimosho'}, {name: 'Amuwo-Odofin'}, {name: 'Apapa'}, {name: 'Badagry'}, {name: 'Epe'}, {name: 'Eti-Osa'}, {name: 'Ibeju-Lekki'}, {name: 'Ifako-Ijaiye'},
-  {name: 'Ikeja'}, {name: 'Ikorodu'}, {name: 'Kosofe'}, {name: 'Lagos Island'}, {name: 'Lagos Mainland'}, {name: 'Mushin'}, {name: 'Ojo'}, {name: 'Oshodi Isolo'}, {name: 'Shomolu'}, {name: 'Surulere'},
-  # LCDAs
-  {name: 'Agbado Oke-Odo'}, {name: 'Agboyi-Ketu'}, {name: 'Apapa-Iganmu'}, {name: 'Ayobo-Ipaja'}, {name: 'Badagry West'}, {name: 'Bariga'}, {name: 'Coker-Aguda'}, {name: 'Egbe-Idimu'}, {name: 'Ejigbo'}, {name: 'Eredo'},
-  {name: 'Eti-Osa East'}, {name: 'Iba'}, {name: 'Ifelodun'}, {name: 'Igando-Ikotun'}, {name: 'Igbogbo-Baiyeku'}, {name: 'Ijede'}, {name: 'Ikorodu North'}, {name: 'Ikorodu West'}, {name: 'Ikosi-Ejirin'}, {name: 'Ikosi-Isheri'},
-  {name: 'Ikoyi-Obalende'}, {name: 'Imota'}, {name: 'Iru-Victoria Island'}, {name: 'Isolo'}, {name: 'Itire-Ikate'}, {name: 'Lagos Island East'}, {name: 'Lekki'}, {name: 'Mosan-Okunola'}, {name: 'Odi Olowo-Ojuwoye'}, {name: 'Ojodu'},
-  {name: 'Ojokoro'}, {name: 'Olorunda'}, {name: 'Onigbongbo'}, {name: 'Oriade'}, {name: 'Orile-Agege'}, {name: 'Oto-Awori'}, {name: 'Yaba'}])
-
-AgencyType.create([{name: 'Health'}, {name: 'Police'}, {name: 'Parastatal'}, {name: 'Ministry'}, {name: 'Commission'},
-  {name: 'Tax'}, {name: 'Driving Services'}, {name: 'Tourism'}])
+# LocalArea.create([{name: 'Agege'}, {name: 'Ajeromi-Ifelodun'}, {name: 'Alimosho'}, {name: 'Amuwo-Odofin'}, {name: 'Apapa'}, {name: 'Badagry'}, {name: 'Epe'}, {name: 'Eti-Osa'}, {name: 'Ibeju-Lekki'}, {name: 'Ifako-Ijaiye'},
+#  {name: 'Ikeja'}, {name: 'Ikorodu'}, {name: 'Kosofe'}, {name: 'Lagos Island'}, {name: 'Lagos Mainland'}, {name: 'Mushin'}, {name: 'Ojo'}, {name: 'Oshodi Isolo'}, {name: 'Shomolu'}, {name: 'Surulere'},
+# LCDAs
+#  {name: 'Agbado Oke-Odo'}, {name: 'Agboyi-Ketu'}, {name: 'Apapa-Iganmu'}, {name: 'Ayobo-Ipaja'}, {name: 'Badagry West'}, {name: 'Bariga'}, {name: 'Coker-Aguda'}, {name: 'Egbe-Idimu'}, {name: 'Ejigbo'}, {name: 'Eredo'},
+#  {name: 'Eti-Osa East'}, {name: 'Iba'}, {name: 'Ifelodun'}, {name: 'Igando-Ikotun'}, {name: 'Igbogbo-Baiyeku'}, {name: 'Ijede'}, {name: 'Ikorodu North'}, {name: 'Ikorodu West'}, {name: 'Ikosi-Ejirin'}, {name: 'Ikosi-Isheri'},
+#  {name: 'Ikoyi-Obalende'}, {name: 'Imota'}, {name: 'Iru-Victoria Island'}, {name: 'Isolo'}, {name: 'Itire-Ikate'}, {name: 'Lagos Island East'}, {name: 'Lekki'}, {name: 'Mosan-Okunola'}, {name: 'Odi Olowo-Ojuwoye'}, {name: 'Ojodu'},
+#  {name: 'Ojokoro'}, {name: 'Olorunda'}, {name: 'Onigbongbo'}, {name: 'Oriade'}, {name: 'Orile-Agege'}, {name: 'Oto-Awori'}, {name: 'Yaba'}])
+AgencyType.create([{name: 'Ministry'}, {name: 'Parastatal'}, {name: 'Bureau'}, {name: 'Commission'}, {name: 'Extra-Ministerial'}])
+# AgencyType.create([{name: 'Health'}, {name: 'Police'}, {name: 'Parastatal'}, {name: 'Ministry'}, {name: 'Commission'},
+#  {name: 'Tax'}, {name: 'Driving Services'}, {name: 'Tourism'}])
 Office.create([{title: 'Governor'}, {title: 'Deputy Governor'}, {title: 'Attorney General'},
   {title: 'Chief of Staff'}, {title: 'State Secretary General'}, {title: 'Head of Service'}, {title: 'Honourable Commissioner'},
   {title: 'Senator'}, {title: 'Honourable Member of National Assembly'}, {title: 'Honourable Member of House Assembly'}, {title: 'Honourable Justice'},
