@@ -26,7 +26,7 @@ Rails.application.routes.draw do
 
   # Directory
   get 'executive'         => 'agencies#executive_council'
-  get 'legistlative'      => 'agencies#legistlative'
+  get 'legislative'      => 'agencies#legislative'
   get 'judiciary'         => 'agencies#judiciary'
   get 'national_assembly' => 'officials#national_assembly'
 
@@ -46,7 +46,7 @@ Rails.application.routes.draw do
   get 'past_governors'  => 'officials#past_governors'
 
   # Services
-  get 'health_centres'      => 'agencies#health_centres'
+  get 'health_centres'      => 'services#health_centres'
   get 'police'              => 'services#police_commands'
   get 'fire_stations'       => 'services#fire_stations'
   get 'tax_offices'         => 'services#tax_offices'
@@ -66,10 +66,10 @@ Rails.application.routes.draw do
   get 'hotels'              => 'pages#hotels_in_nigeria'
   get 'intl_agencies'       => 'pages#international_agencies_in_nigeria'
   get 'oil_and_gas'         => 'pages#oil_and_gas_companies'
-  get 'pro_bodies'          => 'pages#professional_bodies_in_nigeria'
+  get 'pro_bodies'          => 'pages#professional_bodies'
   get 'chambers_of_commerce'=> 'pages#chambers_of_commerce'
   get 'diplomatic_missions' => 'pages#diplomatic_misions'
-  get 'embassies_abroad'    => 'pages#nigerian_embassies_overseas'
+  get 'embassies_overseas'    => 'pages#nigerian_embassies_overseas'
   get 'intl_codes'          => 'pages#international_codes'
 
 

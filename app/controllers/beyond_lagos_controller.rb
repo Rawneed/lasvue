@@ -1,0 +1,2 @@
+class BeyondLagosController < ApplicationController
+end

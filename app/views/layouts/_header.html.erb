@@ -15,25 +15,25 @@
  	        <li role="presentation"><%= link_to "Meet the People", role: "menuitem", tabindex: "-1" %></li>
  	        <li role="presentation"><%= link_to "Divisions", divisions_path,role: "menuitem", tabindex: "-1" %></li>
  	        <li role="presentation"><%= link_to "Economy", role: "menuitem", tabindex: "-1" %></li>
- 	        <li role="presentation"><%= link_to "Tourist Sites", role: "menuitem", tabindex: "-1" %></li>
+ 	        <li role="presentation"><%= link_to "Tourist Sites", tourism_path, role: "menuitem", tabindex: "-1" %></li>
  	      </ul>
  	    </li>
  	    <li class="dropdown"><a href=# class=" dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">Directory
  	    <span class="caret"></span></a>
  	      <ul class="dropdown-menu" role="menu" aria-lagelledby="dropdownMenuDirectory">
- 	        <li role="presentation"><%= link_to "Executive Council", role: "menuitem", tabindex: "-1" %></li>
- 	        <li role="presentation"><%= link_to "Legislative", role: "menuitem", tabindex: "-1" %></li>
- 	        <li role="presentation"><%= link_to "Judiciary", role: "menuitem", tabindex: "-1" %></li>
- 	        <li role="presentation"><%= link_to "National Assembly", role: "menuitem", tabindex: "-1" %></li>
- 	        <li role="presentation"><%= link_to "House of Assembly", role: "menuitem", tabindex: "-1" %></li>
- 	        <li role="presentation"><%= link_to "Permanent Secretaries", role: "menuitem", tabindex: "-1" %></li>
- 	        <li role="presentation"><%= link_to "Director Generals", role: "menuitem", tabindex: "-1" %></li>
- 	        <li role="presentation"><%= link_to "Special Advisers", role: "menuitem", tabindex: "-1" %></li>
+ 	        <li role="presentation"><%= link_to "Executive Council", executive_council_path, role: "menuitem", tabindex: "-1" %></li>
+ 	        <li role="presentation"><%= link_to "Legislative", legislative_path, role: "menuitem", tabindex: "-1" %></li>
+ 	        <li role="presentation"><%= link_to "Judiciary", judges_path, role: "menuitem", tabindex: "-1" %></li>
+ 	        <li role="presentation"><%= link_to "National Assembly",role: "menuitem", tabindex: "-1" %></li>
+ 	        <li role="presentation"><%= link_to "House of Assembly", house_of_assembly_path, role: "menuitem", tabindex: "-1" %></li>
+ 	        <li role="presentation"><%= link_to "Permanent Secretaries", permanent_secretaries_path, role: "menuitem", tabindex: "-1" %></li>
+ 	        <li role="presentation"><%= link_to "Director Generals", director_generals_path, role: "menuitem", tabindex: "-1" %></li>
+ 	        <li role="presentation"><%= link_to "Special Advisers", special_advisers_path, role: "menuitem", tabindex: "-1" %></li>
  	        <li role="presentation"><%= link_to "Civil Service Commission", role: "menuitem", tabindex: "-1" %></li>
  	        <li role="presentation"><%= link_to "Local Government Service Commission", role: "menuitem", tabindex: "-1" %></li>
  	        <li role="presentation"><%= link_to "Judicial Service Commission", role: "menuitem", tabindex: "-1" %></li>
  	        <li role="presentation"><%= link_to "Health Service Commission", role: "menuitem", tabindex: "-1" %></li>
- 	        <li role="presentation"><%= link_to "Council of Obas and Chiefs", role: "menuitem", tabindex: "-1" %></li>
+ 	        <li role="presentation"><%= link_to "Council of Obas and Chiefs", obas_and_chiefs_path, role: "menuitem", tabindex: "-1" %></li>
  	        <li role="presentation"><%= link_to "Past Governors", role: "menuitem", tabindex: "-1" %></li>
  	      </ul>
  	    </li>
@@ -41,34 +41,34 @@
  	    <span class="caret"></span></a>
  	      <ul class="dropdown-menu" role="menu" aria-lagelledby="dropdownMenuServices">
  	      	<li role="presentation"><%= link_to "Hospitals and Health Centres", health_centres_path, role: "menuitem", tabindex: "-1" %></li>
- 	      	<li role="presentation"><%= link_to "Police Commands", role: "menuitem", tabindex: "-1" %></li>
- 	      	<li role="presentation"><%= link_to "Fire Stations", role: "menuitem", tabindex: "-1" %></li>
- 	      	<li role="presentation"><%= link_to "Tax Offices", role: "menuitem", tabindex: "-1" %></li>
- 	      	<li role="presentation"><%= link_to "Drivers License Centres and Institutes", role: "menuitem", tabindex: "-1" %></li>
- 	      	<li role="presentation"><%= link_to "Emergency Numbers", role: "menuitem", tabindex: "-1" %></li>
- 	      	<li role="presentation"><%= link_to "Land Acquistion", role: "menuitem", tabindex: "-1" %></li>
- 	      	<li role="presentation"><%= link_to "Business Information", role: "menuitem", tabindex: "-1" %></li>
+ 	      	<li role="presentation"><%= link_to "Police Commands",  police_path, role: "menuitem", tabindex: "-1" %></li>
+ 	      	<li role="presentation"><%= link_to "Fire Stations", fire_stations_path, role: "menuitem", tabindex: "-1" %></li>
+ 	      	<li role="presentation"><%= link_to "Tax Offices", tax_offices_path, role: "menuitem", tabindex: "-1" %></li>
+ 	      	<li role="presentation"><%= link_to "Drivers License Centres and Institutes", driving_services_path, role: "menuitem", tabindex: "-1" %></li>
+ 	      	<li role="presentation"><%= link_to "Emergency Numbers", emergency_path,role: "menuitem", tabindex: "-1" %></li>
+ 	      	<li role="presentation"><%= link_to "Land Acquistion", land_acquisition_path, role: "menuitem", tabindex: "-1" %></li>
+ 	      	<li role="presentation"><%= link_to "Business Information", business_information_path, role: "menuitem", tabindex: "-1" %></li>
 
  	      </ul>
  	    </li>
  	    <li class="dropdown"><a href=# class=" dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">Beyond Lagos
  	    <span class="caret"></span></a>
  	      <ul class="dropdown-menu" role="menu" aria-lagelledby="dropdownMenuBeyondLagos">
- 	      	<li role="presentation"><%= link_to "National Athem, Pledge", role: "menuitem", tabindex: "-1" %></li>
- 	      	<li role="presentation"><%= link_to "Nigerian States and Capitals", role: "menuitem", tabindex: "-1" %></li>
- 	      	<li role="presentation"><%= link_to "Federal Parastatals", role: "menuitem", tabindex: "-1" %></li>
- 	      	<li role="presentation"><%= link_to "State Liaison Offices", role: "menuitem", tabindex: "-1" %></li>
- 	      	<li role="presentation"><%= link_to "Banks in Nigeria", role: "menuitem", tabindex: "-1" %></li>
- 	      	<li role="presentation"><%= link_to "Insurance Companies in Nigeria", role: "menuitem", tabindex: "-1" %></li>
- 	      	<li role="presentation"><%= link_to "Pension Fund Managers", role: "menuitem", tabindex: "-1" %></li>
- 	      	<li role="presentation"><%= link_to "Hotels in Nigeria", role: "menuitem", tabindex: "-1" %></li>
- 	      	<li role="presentation"><%= link_to "International Agencies in Nigeria", role: "menuitem", tabindex: "-1" %></li>
- 	      	<li role="presentation"><%= link_to "Oil and Gas Companies in Nigeria", role: "menuitem", tabindex: "-1" %></li>
- 	      	<li role="presentation"><%= link_to "Professional Bodies in Nigeria", role: "menuitem", tabindex: "-1" %></li>
- 	      	<li role="presentation"><%= link_to "Bilateral Chambers of Commerce and Associations", role: "menuitem", tabindex: "-1" %></li>
- 	      	<li role="presentation"><%= link_to "Diplomatic Missions and High Commissions in Nigeria", role: "menuitem", tabindex: "-1" %></li>
- 	      	<li role="presentation"><%= link_to "Nigerian Embassies and High Commissions Overseas", role: "menuitem", tabindex: "-1" %></li>
- 	      	<li role="presentation"><%= link_to "International Voltage and Dialing Codes", role: "menuitem", tabindex: "-1" %></li>
+ 	      	<li role="presentation"><%= link_to "National Anthem, Pledge", national_anthem_path,  role: "menuitem", tabindex: "-1" %></li>
+ 	      	<li role="presentation"><%= link_to "Nigerian States and Capitals", states_and_capitals_path, role: "menuitem", tabindex: "-1" %></li>
+ 	      	<li role="presentation"><%= link_to "Federal Parastatals", federal_parastatals_path,  role: "menuitem", tabindex: "-1" %></li>
+ 	      	<li role="presentation"><%= link_to "State Liaison Offices", liaison_offices_path,  role: "menuitem", tabindex: "-1" %></li>
+ 	      	<li role="presentation"><%= link_to "Banks in Nigeria", banks_path, role: "menuitem", tabindex: "-1" %></li>
+ 	      	<li role="presentation"><%= link_to "Insurance Companies in Nigeria", insurance_path,role: "menuitem", tabindex: "-1" %></li>
+ 	      	<li role="presentation"><%= link_to "Pension Fund Managers", pension_path, role: "menuitem", tabindex: "-1" %></li>
+ 	      	<li role="presentation"><%= link_to "Hotels in Nigeria", hotels_path, role: "menuitem", tabindex: "-1" %></li>
+ 	      	<li role="presentation"><%= link_to "International Agencies in Nigeria", intl_agencies_path, role: "menuitem", tabindex: "-1" %></li>
+ 	      	<li role="presentation"><%= link_to "Oil and Gas Companies in Nigeria", oil_and_gas_path, role: "menuitem", tabindex: "-1" %></li>
+ 	      	<li role="presentation"><%= link_to "Professional Bodies in Nigeria", pro_bodies_path, role: "menuitem", tabindex: "-1" %></li>
+ 	      	<li role="presentation"><%= link_to "Bilateral Chambers of Commerce and Associations", chambers_of_commerce_path, role: "menuitem", tabindex: "-1" %></li>
+ 	      	<li role="presentation"><%= link_to "Diplomatic Missions and High Commissions in Nigeria", diplomatic_missions_path, role: "menuitem", tabindex: "-1" %></li>
+ 	      	<li role="presentation"><%= link_to "Nigerian Embassies and High Commissions Overseas", embassies_overseas_path, role: "menuitem", tabindex: "-1" %></li>
+ 	      	<li role="presentation"><%= link_to "International Voltage and Dialing Codes", intl_codes_path, role: "menuitem", tabindex: "-1" %></li>
  	      </ul>
  	    </li>
  	  </ul>
