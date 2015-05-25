@@ -1,0 +1,10 @@
+<% provide(:title, 'Hospitals and Health Centres') %>
+
+<div>
+  <h1><%= @agency_type.name %></h1>
+  <ul class="list-unstyled">
+  	<% @health_centres.each do |health_centre| %>
+    <li><%= health_centre.name  %></li>
+    <% end %>
+  </ul>
+</div>

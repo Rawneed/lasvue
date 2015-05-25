@@ -32,7 +32,7 @@ Rails.application.routes.draw do
 
   # Officials
   get 'executive_council' => 'officials#executive_council'
-  get 'house_assembly'    => 'officials#house_assembly'
+  get 'house_of_assembly'    => 'officials#house_of_assembly'
   get 'judges'            => 'officials#judges'
   get 'magistrates'       => 'officials#magistrates'
   get 'permanent_secretaries' => 'officials#permanent_secretaries'
@@ -45,13 +45,12 @@ Rails.application.routes.draw do
   get 'obas_and_chiefs' => 'officials#obas_and_chiefs'
   get 'past_governors'  => 'officials#past_governors'
 
-
-  # Servcies
-  get 'health'              => 'services#health_centres'
+  # Services
+  get 'health_centres'      => 'agencies#health_centres'
   get 'police'              => 'services#police_commands'
   get 'fire_stations'       => 'services#fire_stations'
   get 'tax_offices'         => 'services#tax_offices'
-  get 'driving_servcies'    => 'services#driving_servcies'
+  get 'driving_services'    => 'services#driving_servcies'
   get 'emergency'           => 'services#emergency_contact'
   get 'land_acquisition'    => 'services#land_acquisition'
   get 'business_information'=> 'services#business_information'
