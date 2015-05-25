@@ -163,11 +163,35 @@ ikoroduDiv.settlements.create([{name: 'Ikorodu'}, {name: 'Egbin'}, {name: 'Igbog
 # Tax Offices
 #
 # Drivers License Centres and Institutes
+# lasdri = AgencyType.find_by(name: 'Lagos State Drivers Institutes')
+# lasdr has_many divisions
+# lasdri.divisions
+#
+# Drivers License Centres # agency belongs to agency type belongs to location has_many contact
+# dlc = AgencyType.find_by(name: 'Parastatal')
+# dls.location.create([{name: 'Bariga Driving Licence Office'}, {name: 'Ikeja Driving Licence Office'}, 
+# {name: 'Ikorodu Driving Licence Office'}, {name: 'Ojodu Driving Licence Office'}, 
+# {name: 'Lagos Island Diving Licence Office'}, {name: 'Okokomaiko Driving License Office'},
+# {name: 'Motor Vehicle Administration Agency HQ'}])
 #
 # Emergency Numbers
-#
+# emergency = AgencyType.find_by(name: 'Emergency')
+# emergency.agencies.create([{name: 'Ambulance Services (LASAMBUS, LASEMS)'},
+#   {name: 'Distressed or Collapsed Buildings (LASPPDA)'}, {name: 'Distress Call Hotline'}, 
+#   {name: 'Emergency Management (LASEMA)'},
+#   {name: 'Environmental Monitoring'}, {name: 'Fire and Saety Services'}, {name: 'Fake Drugs and Narcotics Taskforce'},
+#   {name: 'NAFDAC'}, {name: 'NDLEA'}, {name: 'Flooding and Blocked Drainages (EFAG)'},
+#   {name: 'Health Facilities Regulation (HEFAMA)'}, {name: 'Nigeria Police'}, {name: 'News Alert (Radio Lagos/ EKO FM)'},
+#   {name: 'News Alert Lagos Television'}, {name: 'Open Corpse (SEHMU)'}, {name: 'Public Complaints (Office of Public Defender)'},
+#   {name: 'Public Compliants (Citixens Mediation Centre)'}, {name: 'Public Complaints (Information Strategy)'}, {name: 'Rapid Response Squad (RRS)'},
+#   {name: 'Traffic Control (LASTMA)'}])
 # Land Acquisition
-#
+# DOCUMENTS REQUIRED FOR REGULATION OF LAND
+# A duly completed application made on (Land Regularization Form1) obtainable from the Directorate of Lands
+# - Application forms for Residential User        N 5,000.00
+# - Application forms for Commercial User         N 10,000.00
+# 
+# Alternatively, The Forms can be downleaded (here) and from the Lagos State Government website at: 
 # Business Information
 #
 # BEYOND LAGOS

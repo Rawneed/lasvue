@@ -69,7 +69,7 @@ Rails.application.routes.draw do
   get 'pro_bodies'          => 'beyond_lagos#professional_bodies'
   get 'chambers_of_commerce'=> 'beyond_lagos#chambers_of_commerce'
   get 'diplomatic_missions' => 'beyond_lagos#diplomatic_misions'
-  get 'embassies_overseas'    => 'beyond_lagos#nigerian_embassies_overseas'
+  get 'embassies_overseas'  => 'beyond_lagos#nigerian_embassies_overseas'
   get 'intl_codes'          => 'beyond_lagos#international_codes'
 
 
