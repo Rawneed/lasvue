@@ -1,1 +1,11 @@
 <% provide(:title, 'Fire Stations') %>
+
+<div class="container">
+  <h1><%= @fire_station.name.pluralize %></h1>
+    <hr/>
+    <ul class="list-unstyled">
+    <% @fire_stations.each do |fire_station| %>
+      <li><%= fire_station.name %></li>
+    <% end %>
+    </ul>
+</div>

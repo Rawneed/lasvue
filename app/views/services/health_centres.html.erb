@@ -1,1 +1,11 @@
 <% provide(:title, 'Hospitals and Health Centres') %>
+
+<div class="container">
+  <h1><%= @health_centre.name.pluralize %></h1>
+    <hr/>
+    <ul class="list-unstyled">
+    <% @health_centres.each do |health_centre| %>
+      <li><%= health_centre.name %></li>
+    <% end %>
+    </ul>
+</div>

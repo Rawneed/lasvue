@@ -5,14 +5,14 @@ class ServicesController < ApplicationController
   	@health_centres = @health_centre.agencies
   end
 
-  def police
+  def police_commands
   	@police_command = AgencyType.find_by(name: 'Police Command')
   	@police_commands = @police_command.agencies
   end
   
   def fire_stations
     @fire_station = AgencyType.find_by(name: 'Fire Station')
-  	@fire_station = @fire_station.agencies
+  	@fire_stations = @fire_station.agencies
   end
   
   def tax_offices                   
@@ -20,18 +20,18 @@ class ServicesController < ApplicationController
   	@tax_offices = @tax_office.agencies
   end
   
-  def driving_servcies
+  def driving_services
     @driving_service = AgencyType.find_by(name: 'Driving Service')
   	@driving_services = @driving_service.agencies
   end
   
-  def emergency
-    @emergency = AgencyType.find_by(name: 'Emergency Response')
-  	@emergency_responses = @emergency.agencies
+  def emergency_responses
+    @emergency_response = AgencyType.find_by(name: 'Emergency Response')
+  	@emergency_responses = @emergency_response.agencies
   end
   
   def land_acquisition             
-    render 'services/land_aquitions'
+    render 'services/land_acquisition'
   end
   
   def business_information      

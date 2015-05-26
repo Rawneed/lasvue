@@ -1,13 +1,11 @@
-<% provide(:title, 'Tax Offices') %>
+<% provide(:title, 'Emergency Contact') %>
 
 <div class="container">
   <h1><%= @emergency_response.name.pluralize %></h1>
     <hr/>
     <ul class="list-unstyled">
-    <% if @emergency_responses.each.not_empty? do |emergency_response| %>
+    <% @emergency_responses.each do |emergency_response| %>
       <li><%= emergency_response.name %></li>
-    <% else %>
-      <p>Not Contact Available</p>
     <% end %>
     </ul>
 </div>

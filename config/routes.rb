@@ -51,8 +51,8 @@ Rails.application.routes.draw do
   get 'police'              => 'services#police_commands'
   get 'fire_stations'       => 'services#fire_stations'
   get 'tax_offices'         => 'services#tax_offices'
-  get 'driving_services'    => 'services#driving_servcies'
-  get 'emergency'           => 'services#emergency_contact'
+  get 'driving_services'    => 'services#driving_services'
+  get 'emergency_responses'  => 'services#emergency_responses'
   get 'land_acquisition'    => 'services#land_acquisition'
   get 'business_information'=> 'services#business_information'
 

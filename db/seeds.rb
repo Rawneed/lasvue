@@ -66,9 +66,9 @@ Division.create([{name: 'Lagos'}, {name: 'Ikeja'}, {name: 'Epe'},
 LocalAreaType.create([{name:'Local Government', description: ''},
   {name: 'Local Council Development Area', description: ''}])
 # Use Divisions to create lgas and settlements
-lagosDiv = Division.find_by(name: 'Lagos')
-ikejaDiv = Division.find_by(name: 'Ikeja')
-epeDiv = Division.find_by(name: 'Epe')
+lagosDiv   = Division.find_by(name: 'Lagos')
+ikejaDiv   = Division.find_by(name: 'Ikeja')
+epeDiv     = Division.find_by(name: 'Epe')
 badagryDiv = Division.find_by(name: 'Badagry')
 ikoroduDiv = Division.find_by(name: 'Ikorodu')
 #
@@ -154,13 +154,13 @@ ikoroduDiv.settlements.create([{name: 'Ikorodu'}, {name: 'Egbin'}, {name: 'Igbog
 #
 # SERVCIES
 # Government Forms
-# LASRRA Form 
+# LASRRA Forms 
 #
-# Vote Registration Form
+# Vote Registration Forms
 #
-# LIRS Form
+# LIRS Forms
 # 
-# Lands Form
+# Lands Forms
 #
 # Medical/Health Forms
 # 
@@ -178,29 +178,6 @@ ikoroduDiv.settlements.create([{name: 'Ikorodu'}, {name: 'Egbin'}, {name: 'Igbog
 #
 # Tax Offices
 #
-# Drivers License Centres and Institutes
-# lasdri = AgencyType.find_by(name: 'Lagos State Drivers Institutes')
-# lasdr has_many divisions
-# lasdri.divisions
-#
-# Drivers License Centres # agency belongs to agency type belongs to location has_many contact
-# dlc = AgencyType.find_by(name: 'Driving Licence Office')
-# dls.location.create([{name: 'Bariga Driving Licence Office'}, {name: 'Ikeja Driving Licence Office'}, 
-# {name: 'Ikorodu Driving Licence Office'}, {name: 'Ojodu Driving Licence Office'}, 
-# {name: 'Lagos Island Diving Licence Office'}, {name: 'Okokomaiko Driving License Office'},
-# {name: 'Motor Vehicle Administration Agency HQ'}])
-#
-# Emergency Numbers
-# emergency = AgencyType.find_by(name: 'Emergency')
-# emergency.agencies.create([{name: 'Ambulance Services (LASAMBUS, LASEMS)'},
-#   {name: 'Distressed or Collapsed Buildings (LASPPDA)'}, {name: 'Distress Call Hotline'}, 
-#   {name: 'Emergency Management (LASEMA)'},
-#   {name: 'Environmental Monitoring'}, {name: 'Fire and Saety Services'}, {name: 'Fake Drugs and Narcotics Taskforce'},
-#   {name: 'NAFDAC'}, {name: 'NDLEA'}, {name: 'Flooding and Blocked Drainages (EFAG)'},
-#   {name: 'Health Facilities Regulation (HEFAMA)'}, {name: 'Nigeria Police'}, {name: 'News Alert (Radio Lagos/ EKO FM)'},
-#   {name: 'News Alert Lagos Television'}, {name: 'Open Corpse (SEHMU)'}, {name: 'Public Complaints (Office of Public Defender)'},
-#   {name: 'Public Compliants (Citixens Mediation Centre)'}, {name: 'Public Complaints (Information Strategy)'}, {name: 'Rapid Response Squad (RRS)'},
-#   {name: 'Traffic Control (LASTMA)'}])
 # Land Acquisition
 # DOCUMENTS REQUIRED FOR REGULATION OF LAND
 # A duly completed application made on (Land Regularization Form1) obtainable from the Directorate of Lands
@@ -297,9 +274,6 @@ ikoroduDiv.settlements.create([{name: 'Ikorodu'}, {name: 'Egbin'}, {name: 'Igbog
 #     {name: ''}, {name: ''}, {name: ''}, {name: ''}, 
 #     {name: ''}, {name: ''}, {name: ''}, {name: ''}, 
 #     {name: ''}, {name: ''}, {name: ''}, {name: ''}]) 
-
-
-
 # localGov = LocalAreaType.find('Local Government')
 # localGov.localareas.create
 #   LocalArea LG/LCDA
@@ -310,39 +284,57 @@ ikoroduDiv.settlements.create([{name: 'Ikorodu'}, {name: 'Egbin'}, {name: 'Igbog
 #  {name: 'Eti-Osa East'}, {name: 'Iba'}, {name: 'Ifelodun'}, {name: 'Igando-Ikotun'}, {name: 'Igbogbo-Baiyeku'}, {name: 'Ijede'}, {name: 'Ikorodu North'}, {name: 'Ikorodu West'}, {name: 'Ikosi-Ejirin'}, {name: 'Ikosi-Isheri'},
 #  {name: 'Ikoyi-Obalende'}, {name: 'Imota'}, {name: 'Iru-Victoria Island'}, {name: 'Isolo'}, {name: 'Itire-Ikate'}, {name: 'Lagos Island East'}, {name: 'Lekki'}, {name: 'Mosan-Okunola'}, {name: 'Odi Olowo-Ojuwoye'}, {name: 'Ojodu'},
 #  {name: 'Ojokoro'}, {name: 'Olorunda'}, {name: 'Onigbongbo'}, {name: 'Oriade'}, {name: 'Orile-Agege'}, {name: 'Oto-Awori'}, {name: 'Yaba'}])
-AgencyType.create([{name: 'Ministry'}, {name: 'Parastatal'}, {name: 'Bureau'}, {name: 'Commission'}, {name: 'Extra-Ministerial'}, {name: 'Health Centre'}, {name: 'Police Command'}, {name: 'Financial Institution'},
-  {name: 'Fire Station'}, {name: 'Tourism'}, {name: 'Federal'}, {name: 'Traditional'}, {name: 'Tertiary Institutions'}])
+AgencyType.create([{name: 'Ministry'}, {name: 'Parastatal'}, 
+  {name: 'Bureau'}, {name: 'Commission'}, {name: 'Extra-Ministerial'}, 
+  {name: 'Health Centre'}, {name: 'Police Command'}, 
+  {name: 'Financial Institution'}, {name: 'Fire Station'}, 
+  {name: 'Tourism'}, {name: 'Federal'}, {name: 'Traditional'}, 
+  {name: 'Tertiary Institution'}, {name: 'Driving Service'}, 
+  {name: 'Emergency Response'}])
 # Use agencytype to create agency
-ministry = AgencyType.find_by(name: 'Ministry')
-parastatal = AgencyType.find_by(name: 'Parastatal')
-bureau = AgencyType.find_by(name: 'Bureau')
-commission = AgencyType.find_by(name: 'Commission')
-extra_ministry = AgencyType.find_by(name: 'Extra-Ministerial')
-health_centre = AgencyType.find_by(name: 'Health Centre')
-police = AgencyType.find_by(name: 'Police Command')
-finance = AgencyType.find_by(name: 'Financial Institution')
-fire_station = AgencyType.find_by(name: 'Fire Station')
-tourism = AgencyType.find_by(name: 'Tourism')
-federal = AgencyType.find_by(name: 'Federal')
-traditional = AgencyType.find_by(name: 'Traditional')
-tertiary = AgencyType.find_by(name: 'Tertiary Institution')
+ministry        = AgencyType.find_by(name: 'Ministry')
+parastatal      = AgencyType.find_by(name: 'Parastatal')
+bureau          = AgencyType.find_by(name: 'Bureau')
+commission      = AgencyType.find_by(name: 'Commission')
+extra_ministry  = AgencyType.find_by(name: 'Extra-Ministerial')
+health_centre   = AgencyType.find_by(name: 'Health Centre')
+police          = AgencyType.find_by(name: 'Police Command')
+finance         = AgencyType.find_by(name: 'Financial Institution')
+fire_station    = AgencyType.find_by(name: 'Fire Station')
+tourism         = AgencyType.find_by(name: 'Tourism')
+federal         = AgencyType.find_by(name: 'Federal')
+traditional     = AgencyType.find_by(name: 'Traditional')
+tertiary        = AgencyType.find_by(name: 'Tertiary Institution')
+driving_service = AgencyType.find_by(name: 'Driving Service')
+emergency       = AgencyType.find_by(name: 'Emergency Response')
 # To create agency, supply agency name, within type, supply 
 # an array of officials within office title
-ministry.agencies.create([{name: 'Governor\'s Office'}, {name: 'Deputy Govenor\'s Office'},
-  {name: 'Ministry of Housing'}, {name: 'Office of the Secretary to the State Government'}, 
-  {name: 'Cabinet Office'}, {name: 'State Auditor General\'s Office'}, {name: 'Parastatals Monitoring Office'},
-  {name: 'Ministry of Justice'}, {name: 'Ministry of Works and Infrastructure'}, {name: 'Ministry of Information and Strategy'},
-  {name: 'Ministry of Health'}, {name: 'Ministry of Education'}, {name: 'Office of the Special Adviser on Education'}, 
-  {name: 'Ministry of Agriculture and Co-operatives'}, {name: 'Ministry of Rural Development'}, {name: 'Ministry of Home Affairs and Culture'},
-  {name: 'Lagos State Liaison Office Annex'}, {name: 'Ministry of Commerce and Industry'}, {name: 'Ministry of Local Government and Chieftancy Affairs'}, 
-  {name: 'Ministry of Waterfront Infrastructure Development'}, {name: 'Ministry of Tourism and Inter-Governmental Relations'}, 
-  {name: 'State Treasury and Accountant General\'s Office'}, {name: 'Ministry of Finance'}, {name: 'Ministry of Physical Planning and Urban Development'}, 
-  {name: 'Ministry of The Environment'}, {name: 'Ministry of Transportation'}, {name: 'Office of Mineral Resources Development'}, 
-  {name: 'Ministry of Establishments, Training and Pensions'}, {name: 'Central Business Districts Office'}, {name: 'Civil Service Pensions Office'}, 
-  {name: 'Ministry of Youth, Sports and Social Development'}, {name: 'Ministry of Women Affairs and Poverty Alleviation'}, {name: 'Ministry of Science and Technology'}, 
-  {name: 'Lagos State Valuation Office'}, {name: 'Ministry of Economic Planning and Budget'}, {name: 'Office of the Head of Service'}, {name: 'Public Service Office'}, 
-  {name: 'Ministry of Special Duties'}, {name: 'Debt Management Office'}, 
-  {name: 'Management Sercies Reforms Office'}])
+ministry.agencies.create([{name: 'Governor\'s Office'}, 
+  {name: 'Deputy Govenor\'s Office'}, {name: 'Ministry of Housing'}, 
+  {name: 'Office of the Secretary to the State Government'}, 
+  {name: 'Cabinet Office'}, {name: 'State Auditor General\'s Office'}, 
+  {name: 'Parastatals Monitoring Office'}, {name: 'Ministry of Justice'}, 
+  {name: 'Ministry of Works and Infrastructure'}, {name: 'Ministry of Information and Strategy'},
+  {name: 'Ministry of Health'}, {name: 'Ministry of Education'}, 
+  {name: 'Office of the Special Adviser on Education'}, 
+  {name: 'Ministry of Agriculture and Co-operatives'}, 
+  {name: 'Ministry of Rural Development'}, {name: 'Ministry of Home Affairs and Culture'},
+  {name: 'Lagos State Liaison Office Annex'}, {name: 'Ministry of Commerce and Industry'}, 
+  {name: 'Ministry of Local Government and Chieftancy Affairs'}, 
+  {name: 'Ministry of Waterfront Infrastructure Development'}, 
+  {name: 'Ministry of Tourism and Inter-Governmental Relations'}, 
+  {name: 'State Treasury and Accountant General\'s Office'}, 
+  {name: 'Ministry of Finance'}, {name: 'Ministry of Physical Planning and Urban Development'}, 
+  {name: 'Ministry of The Environment'}, {name: 'Ministry of Transportation'}, 
+  {name: 'Office of Mineral Resources Development'}, 
+  {name: 'Ministry of Establishments, Training and Pensions'}, 
+  {name: 'Central Business Districts Office'}, {name: 'Civil Service Pensions Office'}, 
+  {name: 'Ministry of Youth, Sports and Social Development'}, 
+  {name: 'Ministry of Women Affairs and Poverty Alleviation'}, 
+  {name: 'Ministry of Science and Technology'}, {name: 'Lagos State Valuation Office'}, 
+  {name: 'Ministry of Economic Planning and Budget'}, {name: 'Office of the Head of Service'}, 
+  {name: 'Public Service Office'}, {name: 'Ministry of Special Duties'}, 
+  {name: 'Debt Management Office'}, {name: 'Management Sercies Reforms Office'}])
 # Parastatal Agencies
 parastatal.agencies.create([{name: 'Motor Vehicle Administration Agency'}, {name: 'New Towns Development Authority'}, {name: 'Lagos Television and Eko FM'}])
 #  {name: ''}, {name: ''}, {name: ''}, {name: ''}, {name: ''}, {name: ''}, {name: ''}, {name: ''}, {name: ''}, {name: ''}, 
@@ -383,14 +375,33 @@ fire_station.agencies.create([{name: 'Alausa'}, {name: 'Agege'}, {name: 'Apapa'}
 # federal.agencies.create([{name: ''}, {name: ''}])
 # traditional.agencies.create([{name: ''}, {name: ''}])
 # tertiary.agencies.create([{name: ''}, {name: ''}])
-
-# AgencyType.create([{name: 'Health'}, {name: 'Police'}, {name: 'Parastatal'}, {name: 'Ministry'}, {name: 'Commission'},
-#  {name: 'Tax'}, {name: 'Driving Services'}, {name: 'Tourism'}])
+# Driving Services
+driving_service.agencies.create([{name: 'Bariga Driving Licence Office'}, {name: 'Ikeja Driving Licence Office'}, 
+  {name: 'Ikorodu Driving Licence Office'}, {name: 'Ojodu Driving Licence Office'}, 
+  {name: 'Lagos Island Diving Licence Office'}, {name: 'Okokomaiko Driving License Office'},
+  {name: 'Motor Vehicle Administration Agency HQ'}])
+# Drivers License Centres and Institutes
+# lasdri = AgencyType.find_by(name: 'Lagos State Drivers Institutes')
+# lasdr has_many divisions
+# lasdri.divisions
+#
+# Emergency
+emergency.agencies.create([{name: 'Ambulance Services (LASAMBUS, LASEMS)'},
+  {name: 'Distressed or Collapsed Buildings (LASPPDA)'}, {name: 'Distress Call Hotline'}, 
+  {name: 'Emergency Management (LASEMA)'},
+  {name: 'Environmental Monitoring'}, {name: 'Fire and Saety Services'}, {name: 'Fake Drugs and Narcotics Taskforce'},
+  {name: 'NAFDAC'}, {name: 'NDLEA'}, {name: 'Flooding and Blocked Drainages (EFAG)'},
+  {name: 'Health Facilities Regulation (HEFAMA)'}, {name: 'Nigeria Police'}, {name: 'News Alert (Radio Lagos/ EKO FM)'},
+  {name: 'News Alert Lagos Television'}, {name: 'Open Corpse (SEHMU)'}, {name: 'Public Complaints (Office of Public Defender)'},
+  {name: 'Public Compliants (Citixens Mediation Centre)'}, {name: 'Public Complaints (Information Strategy)'}, {name: 'Rapid Response Squad (RRS)'},
+  {name: 'Traffic Control (LASTMA)'}])
+# Office Titles
 Office.create([{title: 'Governor'}, {title: 'Deputy Governor'}, {title: 'Attorney General'},
   {title: 'Chief of Staff'}, {title: 'State Secretary General'}, {title: 'Head of Service'}, {title: 'Honourable Commissioner'},
   {title: 'Senator'}, {title: 'Honourable Member of National Assembly'}, {title: 'Honourable Member of House Assembly'}, {title: 'Honourable Justice'},
   {title: 'Magistrate'}, {title: 'Permanent Secretary'}, {title: 'Director General'}, {title: 'Oba'}, {title: 'Chief'},
   {title: 'Chairman of Commission'}, {title: 'Executive Secretary'}, {title: 'General Manager'}, {title: 'Inspector General'}])
+# OfficeRank.office.
 #     {title: ''}, {title: ''}, {title: ''}, {title: ''},
 #     {title: ''}, {title: ''}, {title: ''}, {title: ''}]) 
 # Lagos State Council of Obas and Chiefs

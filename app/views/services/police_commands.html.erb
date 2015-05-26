@@ -1,1 +1,11 @@
 <% provide(:title, 'Police Commands') %>
+
+<div class="container">
+  <h1><%= @police_command.name.pluralize %></h1>
+    <hr/>
+    <ul class="list-unstyled">
+    <% @police_commands.each do |police_command| %>
+      <li><%= police_command.name %></li>
+    <% end %>
+    </ul>
+</div>
