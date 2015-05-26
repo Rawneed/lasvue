@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'forms/index'
+
   root                       'pages#home'
   get 'divisions'         => 'regions#divisions'
   get 'lgas'              => 'regions#local_government_areas'
