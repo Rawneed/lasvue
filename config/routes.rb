@@ -1,6 +1,4 @@
 Rails.application.routes.draw do
-  get 'forms/index'
-
   root                       'pages#home'
   get 'divisions'         => 'regions#divisions'
   get 'lgas'              => 'regions#local_government_areas'
@@ -48,6 +46,7 @@ Rails.application.routes.draw do
   get 'past_governors'  => 'officials#past_governors'
 
   # Services
+  get 'forms'               => 'forms#index'
   get 'health_centres'      => 'services#health_centres'
   get 'police'              => 'services#police_commands'
   get 'fire_stations'       => 'services#fire_stations'

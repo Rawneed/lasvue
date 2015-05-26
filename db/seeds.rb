@@ -153,7 +153,23 @@ ikoroduDiv.settlements.create([{name: 'Ikorodu'}, {name: 'Egbin'}, {name: 'Igbog
 # Council of Obas and Chiefs
 #
 # SERVCIES
+# Government Forms
+# LASRRA Form 
 #
+# Vote Registration Form
+#
+# LIRS Form
+# 
+# Lands Form
+#
+# Medical/Health Forms
+# 
+# Academic Forms
+#
+# Lands Forms
+#
+# Businsess Forms
+# 
 # Hospitals and health Centres
 #
 # Polica Commands
@@ -168,7 +184,7 @@ ikoroduDiv.settlements.create([{name: 'Ikorodu'}, {name: 'Egbin'}, {name: 'Igbog
 # lasdri.divisions
 #
 # Drivers License Centres # agency belongs to agency type belongs to location has_many contact
-# dlc = AgencyType.find_by(name: 'Parastatal')
+# dlc = AgencyType.find_by(name: 'Driving Licence Office')
 # dls.location.create([{name: 'Bariga Driving Licence Office'}, {name: 'Ikeja Driving Licence Office'}, 
 # {name: 'Ikorodu Driving Licence Office'}, {name: 'Ojodu Driving Licence Office'}, 
 # {name: 'Lagos Island Diving Licence Office'}, {name: 'Okokomaiko Driving License Office'},
