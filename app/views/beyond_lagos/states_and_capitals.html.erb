@@ -1,1 +1,15 @@
 <% provide(:title, 'Nigerian States and Capitals') %>
+
+<div class="container">
+  <h1>Nigerian States and Capitals</h1>
+  <% @region.each do |region| %>
+    <h2><%= region.location %></h2>
+      <ul class="list-unstyled">
+        <% unless region.nigerian_states.blank? %> 
+          <% region.nigerian_states. each do |state| %>
+        <li><%= state.name %>, Capital: <%= state.capital  %></li>
+        <% end %>
+        <% end %>
+      </ul>
+  <% end %>
+</div>

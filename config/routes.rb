@@ -65,11 +65,11 @@ Rails.application.routes.draw do
   get 'insurance'           => 'beyond_lagos#insurance_companies'
   get 'pension'             => 'beyond_lagos#pension_fund_managers'
   get 'hotels'              => 'beyond_lagos#hotels_in_nigeria'
-  get 'intl_agencies'       => 'beyond_lagos#international_agencies_in_nigeria'
+  get 'intl_agencies'       => 'beyond_lagos#international_agencies'
   get 'oil_and_gas'         => 'beyond_lagos#oil_and_gas_companies'
   get 'pro_bodies'          => 'beyond_lagos#professional_bodies'
   get 'chambers_of_commerce'=> 'beyond_lagos#chambers_of_commerce'
-  get 'diplomatic_missions' => 'beyond_lagos#diplomatic_misions'
+  get 'diplomatic_missions'  => 'beyond_lagos#diplomatic_missions'
   get 'embassies_overseas'  => 'beyond_lagos#nigerian_embassies_overseas'
   get 'intl_codes'          => 'beyond_lagos#international_codes'
 

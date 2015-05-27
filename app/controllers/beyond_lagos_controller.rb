@@ -1,10 +1,12 @@
-class BeyondLagosController < ApplicationController
+  class BeyondLagosController < ApplicationController
 
   
   def national_anthem
   end
 
   def states_and_capitals
+    @region = Region.all
+    # @states = @region.nigerian_states
   end
 
   def federal_parastatals

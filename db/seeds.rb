@@ -1,7 +1,5 @@
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-#
 # Clear all the data in database before loading seed data
 Agency.delete_all
 AgencyType.delete_all
@@ -16,6 +14,9 @@ Population.delete_all
 Settlement.delete_all
 TouristSite.delete_all
 ChieftancyTitle.delete_all
+# SealSymbols.delete_all
+Region.delete_all
+NigerianState.delete_all
 #
 # Examples:
 #
@@ -61,6 +62,16 @@ ChieftancyTitle.delete_all
 #       created in May 1968 by virtue of Administrative Divsions (Establishment) Edict No. 3 of April 1968. The Divisions are further divided into 20 local governments and 37 local council development areas respectively, in 
 #       accordance with Nigeria\'s Federal structure and the need to bring governance, development and participatory democracy to the grassroots.'},
 #      {title: 'The Economoy of Lagos State', text:''}])
+# Seal Symbols
+# SealSymbol.create([{symbol: 'White Cap (Keremesi)', meaning: 'It denotes a symbol of authority common to most ares of Lagos State', image_file: ''},
+#   {symbol: 'Akoko Leaves', meaning: 'These signify logevity. It is universally used at the installation of Obas and Chiefs in Lagos and all over Yorubaland', image_file: ''},
+#   {symbol: 'Cowries', meaning: 'They signify the earliest medium of exchange', image_file: ''},
+#   {symbol: 'Wheel', meaning: '', image_file: ''},
+#   {symbol: 'Fishing Activity', meaning: '', image_file: ''},
+#   {symbol: 'Coconut Palm', meaning: '', image_file: ''},
+#   {symbol: 'Motto Justice and Progress', meaning: '', image_file: ''},
+#   {symbol: 'The Three Lines', meaning: '', image_file: ''}])
+# Lagos State Divisions
 Division.create([{name: 'Lagos'}, {name: 'Ikeja'}, {name: 'Epe'}, 
   {name: 'Badagry'}, {name: 'Ikorodu'}])
 LocalAreaType.create([{name:'Local Government', description: ''},
@@ -219,7 +230,6 @@ ikoroduDiv.settlements.create([{name: 'Ikorodu'}, {name: 'Egbin'}, {name: 'Igbog
 #
 # International Voltage and Dialing Codes
 #
-
 #   symbol: symbol_name: , meaning:
 # 	population_trend: year:, population:, global_ranking:
 # 	National Assembly: person_name:, region/district:
@@ -449,12 +459,65 @@ ikoroduDiv.chieftancy_titles.create([{title: 'Adeboruwa of Igbogbo'}, {title: 'A
 # 	Emergency/Vital Telephone Numbers
 # 	Docs Required For Regularization of Land
 # 	Chairmen of 20 Local Gov. & 37 Local Council Dev Areas
-# 	Tertiary Institurtions
+# 	Tertiary Institutions
+# Nigerian Regions
+Region.create([{location: 'North'}, {location: 'South'}, 
+   {location: 'East'}, {location: 'West'}, {location: 'North East'},
+   {location: 'North West'}, {location: 'South East'}, {location: 'Central'},
+   {location: 'South West'}, {location: 'North Central'}, {location: 'South South'}])
+north_east = Region.find_by(location: 'North East')
+north_west = Region.find_by(location: 'North West')
+north_central = Region.find_by(location: 'North Central')
+south_east = Region.find_by(location: 'South East')
+south_west = Region.find_by(location: 'South West')
+south_south = Region.find_by(location: 'South South')
 # Nigerian States
-# State.create([{name: '', region: '', population: ''}])
+north_east.nigerian_states.create([ 
+  {name: 'Adamawa', capital: 'Yola', population: '', appellation: 'Land of Beauty'}, 
+  {name: 'Bauchi',  capital: 'Bauchi', population: '', appellation: 'Pearl of Tourism'}, 
+  {name: 'Borno',   capital: 'Maiduguri', population: '', appellation: 'Home of Peace'}, 
+  {name: 'Gombe',   capital: 'Gombe', population: '', appellation: 'New World'},
+  {name: 'Taraba',  capital: 'Jalingo', population: '', appellation: 'Natures Gift to the Nation'},
+  {name: 'Yobe',    capital: 'Damaturu', population: '', appellation: 'The Young Shall Grown'}])
+north_west.nigerian_states.create([
+  {name: 'Jigawa',  capital: 'Dutse', population: '', appellation: 'Centre of Commerce'}, 
+  {name: 'Kaduna',  capital: 'Kaduna', population: '', appellation: 'State of Hospitality'},
+  {name: 'Kano',    capital: 'Kano', population: '', appellation: 'Land of Equity'}, 
+  {name: 'Kebbi',   capital: 'Birnin Kebbi', population: '', appellation: ''}, 
+  {name: 'Sokoto',  capital: 'Sokoto', population: '', appellation: 'Seat of the Caliphate'}, 
+  {name: 'Zamfara', capital: 'Gusau', population: '', appellation: 'Farming is our Pride'}])
+north_central.nigerian_states.create([
+    {name: 'Abuja',   capital: 'FCT', population: '', appellation: 'Centre of Unity'},
+  {name: 'Benue',     capital: 'Makurdi', population: '', appellation: 'Food Basket of the Nation'}, 
+  {name: 'Niger',     capital: 'Minna', population: '', appellation: 'The Power State'}, 
+  {name: 'Katsina',   capital: 'Katsina', population: '', appellation: 'The Confluence State'}, 
+  {name: 'Kogi',      capital: 'Lokoja', population: '', appellation: ''},
+  {name: 'Kwara',     capital: 'Ilorin', population: '', appellation: 'State of Harmony'}, 
+  {name: 'Nassarawa', capital: 'Lafia', population: '', appellation: 'Home of Solid Mineral'}, 
+  {name: 'Plateau',   capital: 'Jos', population: '', appellation: 'Home of Peace and Tourism'}])
+south_east.nigerian_states.create([
+  {name: 'Abia',    capital: 'Umuahia', population: '', appellation: 'God\'s Own State'},
+  {name: 'Anambra', capital: 'Awka', population: '', appellation: 'The Light of The Nation'},
+  {name: 'Ebonyi',  capital: 'Abakaliki', population: '', appellation: 'Fountain of Knowledge'},
+  {name: 'Enugu',   capital: 'Enugu', population: '', appellation: 'Eastern Heart Land'}, 
+  {name: 'Imo',     capital: 'Owerri', population: '', appellation: 'Liberal State'}])
+south_west.nigerian_states.create([
+  {name: 'Ekiti', capital: 'Ado-Ekiti', population: '', appellation: 'Jewel of the Savannah'}, 
+  {name: 'Lagos', capital: 'Ikeja', population: '', appellation: 'Centre of Excellence'},
+  {name: 'Ogun',  capital: 'Abeokuta', population: '', appellation: 'The Gateway State'}, 
+  {name: 'Ondo',  capital: 'Akure', population: '', appellation: 'The Sunshine State'}, 
+  {name: 'Osun',  capital: 'Osogbo', population: '', appellation: 'State of Living Spring'}, 
+  {name: 'Oyo',   capital: 'Ibadan', population: '', appellation: 'Pace Setter State'}])
+south_south.nigerian_states.create([
+  {name: 'Akwa-Ibom',   capital: 'Uyo', population: '', appellation: 'Land of Fulfilment'}, 
+  {name: 'Bayelsa',     capital: 'Yenagoa', population: '', appellation: 'The Glory of All Lands'},
+  {name: 'Cross River', capital: 'Calabar', population: '', appellation: 'The Peoples Paradise'}, 
+  {name: 'Delta',       capital: 'Asaba', population: '', appellation: 'The Big Heart of the Nation'}, 
+  {name: 'Edo',         capital: 'Benin City', population: '', appellation: 'Coal City State'}, 
+  {name: 'Rivers',      capital: 'Port Harcourt', population: '', appellation: 'Treasure Base of the Nation'}])
 # African Countries
 # Country.create([{name: '', region: '', capital: '', state_count: ''}])
-#
+
 
 
 

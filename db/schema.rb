@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150524215030) do
+ActiveRecord::Schema.define(version: 20150527010153) do
 
   create_table "agencies", force: :cascade do |t|
     t.string   "name"
@@ -89,6 +89,18 @@ ActiveRecord::Schema.define(version: 20150524215030) do
     t.datetime "updated_at",  null: false
   end
 
+  create_table "nigerian_states", force: :cascade do |t|
+    t.string   "name"
+    t.string   "capital"
+    t.integer  "region_id"
+    t.integer  "population"
+    t.string   "appellation"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  add_index "nigerian_states", ["region_id"], name: "index_nigerian_states_on_region_id"
+
   create_table "offices", force: :cascade do |t|
     t.string   "title"
     t.datetime "created_at", null: false
@@ -113,6 +125,12 @@ ActiveRecord::Schema.define(version: 20150524215030) do
   end
 
   add_index "populations", ["local_area_id"], name: "index_populations_on_local_area_id"
+
+  create_table "regions", force: :cascade do |t|
+    t.string   "location"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "settlements", force: :cascade do |t|
     t.string   "name"
