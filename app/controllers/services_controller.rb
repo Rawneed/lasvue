@@ -1,5 +1,8 @@
 class ServicesController < ApplicationController
 
+  def index
+  end
+
   def health_centres
     @health_centre = AgencyType.find_by(name: 'Health Centre')
   	@health_centres = @health_centre.agencies

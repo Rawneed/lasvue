@@ -25,12 +25,14 @@ Rails.application.routes.draw do
   get 'tourism'           => 'meet_lagos#tourist_sites'
 
   # Directory
-  get 'executive'         => 'agencies#executive_council'
-  get 'legislative'       => 'agencies#legislative'
-  get 'judiciary'         => 'agencies#judiciary'
-  get 'national_assembly' => 'officials#national_assembly'
+  get 'executive'         => 'officials#executive'
+  get 'legislative'       => 'officials#state_assembly'
+  get 'judiciary'         => 'judiciary#judges'
+  get 'magistrates'       => 'judiciary#magistrates'
+  get 'national_assembly' => 'legislative#national_assembly'
 
   # Officials
+  get 'officials_index'   => 'officials#index'
   get 'executive_council' => 'officials#executive_council'
   get 'house_of_assembly'    => 'officials#house_of_assembly'
   get 'judges'            => 'officials#judges'
@@ -47,16 +49,18 @@ Rails.application.routes.draw do
 
   # Services
   get 'forms'               => 'forms#index'
+  get 'services_index'      => 'services#index'
   get 'health_centres'      => 'services#health_centres'
   get 'police'              => 'services#police_commands'
   get 'fire_stations'       => 'services#fire_stations'
   get 'tax_offices'         => 'services#tax_offices'
   get 'driving_services'    => 'services#driving_services'
-  get 'emergency_responses'  => 'services#emergency_responses'
+  get 'emergency_responses' => 'services#emergency_responses'
   get 'land_acquisition'    => 'services#land_acquisition'
   get 'business_information'=> 'services#business_information'
 
   # Beyond Lagos
+  get 'beyond_lagos_index'  => 'beyond_lagos#index'
   get 'national_anthem'     => 'beyond_lagos#national_anthem'
   get 'states_and_capitals' => 'beyond_lagos#states_and_capitals'
   get 'federal_parastatals' => 'beyond_lagos#federal_parastatals'

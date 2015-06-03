@@ -1,7 +1,7 @@
-class LegistlativeController < ApplicationController
+class LegislativeController < ApplicationController
   def national_assembly
   end
 
-  def house_assembly
+  def state_assembly
   end
 end

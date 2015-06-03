@@ -12,4 +12,7 @@ class AgenciesController < ActionController::Base
   def parastatals
 
   end
+
+  def tax_offices
+  end
 end

@@ -1,5 +1,7 @@
-  class BeyondLagosController < ApplicationController
+class BeyondLagosController < ApplicationController
 
+  def index
+  end
   
   def national_anthem
   end

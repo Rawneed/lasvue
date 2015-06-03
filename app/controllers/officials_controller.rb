@@ -1,14 +1,18 @@
 class OfficialsController < ActionController::Base
+
+  def index
+  end
+
   def national_assembly # lagos_state_members_in_the_national_assembly
 
   end
 
-  def executive_council # members_of_the_executive_council
-
+  def executive # members_of_the_executive_council
+    render 'executive/index'
   end
 
-  def house_assembly # members_of_house_assembly 
-
+  def state_assembly # members_of_house_assembly 
+    render 'legislative/state_assembly'
   end
 
   def judges	# body_of_benchers
