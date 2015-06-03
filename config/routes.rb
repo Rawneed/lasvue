@@ -26,7 +26,7 @@ Rails.application.routes.draw do
 
   # Directory
   get 'executive'         => 'agencies#executive_council'
-  get 'legislative'      => 'agencies#legislative'
+  get 'legislative'       => 'agencies#legislative'
   get 'judiciary'         => 'agencies#judiciary'
   get 'national_assembly' => 'officials#national_assembly'
 

@@ -300,7 +300,7 @@ AgencyType.create([{name: 'Ministry'}, {name: 'Parastatal'},
   {name: 'Financial Institution'}, {name: 'Fire Station'}, 
   {name: 'Tourism'}, {name: 'Federal'}, {name: 'Traditional'}, 
   {name: 'Tertiary Institution'}, {name: 'Driving Service'}, 
-  {name: 'Emergency Response'}])
+  {name: 'Emergency Response'}, {name: 'Tax Office'}])
 # Use agencytype to create agency
 ministry        = AgencyType.find_by(name: 'Ministry')
 parastatal      = AgencyType.find_by(name: 'Parastatal')
@@ -317,6 +317,7 @@ traditional     = AgencyType.find_by(name: 'Traditional')
 tertiary        = AgencyType.find_by(name: 'Tertiary Institution')
 driving_service = AgencyType.find_by(name: 'Driving Service')
 emergency       = AgencyType.find_by(name: 'Emergency Response')
+tax_office      = AgencyType.find_by(name: 'Tax Office')
 # To create agency, supply agency name, within type, supply 
 # an array of officials within office title
 ministry.agencies.create([{name: 'Governor\'s Office'}, 

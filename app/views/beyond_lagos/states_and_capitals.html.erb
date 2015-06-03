@@ -5,8 +5,9 @@
   <% @region.each do |region| %>
     <h2><%= region.location %></h2>
       <ul class="list-unstyled">
-        <% unless region.nigerian_states.blank? %> 
+         
           <% region.nigerian_states. each do |state| %>
+          <% if !region.nigerian_states.empty? %>
         <li><%= state.name %>, Capital: <%= state.capital  %></li>
         <% end %>
         <% end %>
