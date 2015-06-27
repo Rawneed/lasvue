@@ -15,7 +15,7 @@ Rails.application.routes.draw do
 
   # Meet Lagos
   get 'profile'           => 'meet_lagos#profile_on_lagos'
-  get 'extent'            => 'meet_lagos#lagos_extent'
+  get 'extent'            => 'meet_lagos#location_extent'
   get 'relief'            => 'meet_lagos#relief'
   get 'demography'        => 'meet_lagos#demography'
   get 'megacity'          => 'meet_lagos#megacity'
@@ -24,7 +24,7 @@ Rails.application.routes.draw do
   get 'economy'           => 'meet_lagos#lagos_state_economy'
   get 'tourism'           => 'meet_lagos#tourist_sites'
 
-  # Directory
+  # Secretariat
   get 'executive'         => 'officials#executive'
   get 'legislative'       => 'officials#state_assembly'
   get 'judiciary'         => 'judiciary#judges'

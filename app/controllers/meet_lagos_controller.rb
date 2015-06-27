@@ -4,7 +4,7 @@ class MeetLagosController < ApplicationController
  	# @write_up = MeetLagosWriteUp.find()
  end
 
- def lagos_extent
+ def location_extent
  end
 
  def relief
