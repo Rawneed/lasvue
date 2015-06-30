@@ -15,6 +15,14 @@
 @import "bootstrap";
 @import "font-awesome";
 
+.navbar {
+   background-color: transparent;
+   background: transparent;
+   border-color: transparent;
+}
+
+.navbar li { color: #000 } 
+
 // Variables
 @link-color:       @brand-primary;
 @link-hover-color: darken(@link-color, 15%);
@@ -58,7 +66,7 @@ textarea {
   float: left;
   margin-right: 10px;
   font-size: 1.7em;
-  color: #fff;
+  color: #7ba14f;
   text-transform: uppercase;
   letter-spacing: -1px;
   padding-top: 9px;
@@ -66,7 +74,7 @@ textarea {
 }
 
 #logo:hover {
-  color: #fff;
+  color: #a72d14;
   text-decoration: none;
 }
 

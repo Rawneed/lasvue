@@ -21,8 +21,8 @@ Rails.application.routes.draw do
   get 'megacity'          => 'meet_lagos#megacity'
   get 'people'            => 'meet_lagos#people_of_lagos'
   get 'divisions'         => 'meet_lagos#divisions'
-  get 'economy'           => 'meet_lagos#lagos_state_economy'
-  get 'tourism'           => 'meet_lagos#tourist_sites'
+  get 'economy'           => 'meet_lagos#economy'
+  get 'tourism'           => 'meet_lagos#tourism'
 
   # Secretariat
   get 'executive'         => 'officials#executive'
