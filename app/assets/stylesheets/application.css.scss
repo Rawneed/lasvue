@@ -19,9 +19,22 @@
    background-color: transparent;
    background: transparent;
    border-color: transparent;
+  
+  #navbar:hover {
+  color: #a72d14;
+  text-decoration: none;
+  }
+
+  li {
+
+    li:hover {
+      color: #a72d14;
+  text-decoration: none;
+    }
+  }
 }
 
-.navbar li { color: #000 } 
+//.navbar li { color: #000 } 
 
 // Variables
 @link-color:       @brand-primary;
@@ -39,10 +52,9 @@ a {
 
   &:hover {
     //color: @link-hover-color;
-    text-decoration: underline;
+    //text-decoration: underline;
   }
 }
-
 
 body {
   padding-top: 60px;
@@ -76,6 +88,14 @@ textarea {
 #logo:hover {
   color: #a72d14;
   text-decoration: none;
+}
+
+.nav {
+  
+  .nav:hover {
+    color: #a72d14;
+    text-decoration: none;
+  }
 }
 
 .dropdown-menu li:hover .sub-menu {
