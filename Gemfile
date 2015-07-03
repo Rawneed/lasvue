@@ -22,6 +22,7 @@ gem 'active_model_serializers', '~> 0.9.3'
 gem 'haml',                     '~> 4.0.6'
 gem 'simple_form',              '~> 3.1.0'
 gem 'haml-rails',               '~> 0.9'
+gem 'capistrano',               '~> 3.4.0'
 
 group :development, :test do
   gem 'sqlite3',                '~> 1.3.10'

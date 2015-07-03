@@ -3,9 +3,9 @@
  	<%= link_to "Lasvue", root_path, id: "logo" %>
  	<nav>
  	  <ul class="nav navbar-nav navbar-right" id="nav-menu">
- 	    <li style="color:#14a72d;"><%= link_to "Home", root_path %></li>
+ 	    <li><%= link_to "Home", root_path, id: "headermenu" %></li>
  	    <!-- Meet Lagos -->
- 	     <li class="dropdown"><a href=# class=" dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">Meet Lagos
+ 	     <li class="dropdown"><a href=# class=" dropdown-toggle" type="button" id="headermenu" data-toggle="dropdown" aria-expanded="true">Meet Lagos
  	    <span class="caret"></span></a>
  	      <ul class="dropdown-menu" role="menu" aria-lagelledby="dropdownMenuDirectory">
  	        <li role="presentation"><%= link_to "Profile of Lagos", profile_path, role: "menuitem", tabindex: "-1" %></li>
@@ -20,7 +20,7 @@
  	      </ul>
  	    </li>
  	    <!-- Directory -->
- 	    <li class="dropdown"><a href="#" class=" dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">i-Secretariat
+ 	    <li class="dropdown"><a href="#" class=" dropdown-toggle" type="button" id="headermenu" data-toggle="dropdown" aria-expanded="true">i-Secretariat
  	    <span class="caret"></span></a>
  	      <ul class="dropdown-menu" role="menu" aria-lagelledby="dropdownMenuServices">
  	        <li role="presentation"><%= link_to "Executive", executive_path, role: "menuitem", tabindex: "-1" %></li>
@@ -38,7 +38,7 @@
  	      </ul>
  	    </li>
  	    <!-- Services -->
- 	    <li class="dropdown"><a href="#" class=" dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">Services
+ 	    <li class="dropdown"><a href="#" class=" dropdown-toggle" type="button" id="headermenu" data-toggle="dropdown" aria-expanded="true">Services
  	    <span class="caret"></span></a>
  	      <ul class="dropdown-menu" role="menu" aria-lagelledby="dropdownMenuServices">
  	        <li role="presentation"><%= link_to "Government Forms", forms_path, role: "menuitem", tabindex: "-1" %></li>
@@ -53,7 +53,7 @@
 
  	      </ul>
  	    </li>
- 	    <li class="dropdown"><a href=# class=" dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">Beyond Lagos
+ 	    <li class="dropdown"><a href=# class=" dropdown-toggle" type="button" id="headermenu" data-toggle="dropdown" aria-expanded="true">Beyond Lagos
  	    <span class="caret"></span></a>
  	      <ul class="dropdown-menu" role="menu" aria-lagelledby="dropdownMenuBeyondLagos">
  	      	<li role="presentation"><%= link_to "National Anthem, Pledge", national_anthem_path,  role: "menuitem", tabindex: "-1" %></li>

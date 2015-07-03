@@ -20,21 +20,31 @@
    background: transparent;
    border-color: transparent;
   
-  #navbar:hover {
-  color: #a72d14;
+  #navbar, #headermenu {
+    font-weight: bold;
+    &:hover {
+      color: #fff;
+      background: #7ba14f;
+    }
+  color: #4f7ba1;
   text-decoration: none;
   }
 
-  li {
+  .nav, .navbar-nav, #nav-menu, li, dropdown, ul {
+      &:hover {
+    color: #000000;
+    text-decoration: none;
+    }
+  }
 
-    li:hover {
+  li, ul {
+    &:hover {
       color: #a72d14;
   text-decoration: none;
     }
   }
 }
 
-//.navbar li { color: #000 } 
 
 // Variables
 @link-color:       @brand-primary;
